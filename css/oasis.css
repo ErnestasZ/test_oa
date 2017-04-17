@@ -1,0 +1,237 @@
+@import "new-age.css";
+
+.logo {
+  height: 30px;
+  margin-top: -5px; important!
+}
+
+div.header-oasis1 {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+/*  overflow-y: hidden;*/
+  background: url("../images/OASIS-INTRO1_.jpg") no-repeat  center scroll;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white; 
+  animation:fade 8s infinite;
+  -webkit-animation:fade 8s infinite;
+}
+
+div.header-oasis2 {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+/*  overflow-y: hidden;*/
+  background: url("../images/OASIS-INTRO2_.jpg") no-repeat  center scroll;
+  /* fallback for old browsers */
+  background: url("../images/OASIS-INTRO2_.jpg") no-repeat  center scroll;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: url("../images/OASIS-INTRO2_.jpg") no-repeat  center scroll;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white; 
+  animation:fade1 8s infinite;
+  -webkit-animation:fade1 8s infinite;
+}
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  
+}
+
+/*header block*/
+
+header .oasis-header {
+  text-align: center;
+  padding: 80px 0 50px;
+  position: relative;
+  margin-top: 0;
+  
+}
+
+header .oasis-header h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-style: italic;
+}
+
+header .oasis-header p {
+  font-style: italic;
+}
+
+.btn-header{
+  margin-bottom: 50px;
+}
+
+.icon-head{
+  vertical-align: middle;
+  font-size: 25px;
+  padding-left: 5px;
+  font-weight: 600;
+  
+}
+
+.highlights a{
+  color: white;
+}
+
+.highlights a:hover {
+  color: #fdcc52;
+  text-decoration: none;
+}
+
+.highlights a:focus{
+  text-decoration: none;
+}
+
+.header-movie {
+  margin-top: 300px;
+}
+
+
+@media (min-width: 992px)  {
+  
+  header .oasis-header h1 {
+    font-size: 50px;
+  }
+  header .oasis-header p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px)  {
+  header .oasis-header h1 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+/*content */
+
+section.content-oasis {
+  background: white;
+  margin: 0; 
+  padding: 50px 0;
+  color: black;
+  
+}
+
+.oasis-cont{
+  color: #174a87;
+}
+
+section.image-bg-oasis {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+/*  overflow-y: hidden;*/
+  background: url("../images/OASIS-web2.jpg") no-repeat  center bottom scroll;
+  /* fallback for old browsers */
+  background: url("../images/OASIS-web2.jpg") no-repeat  center bottom scroll;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: url("../images/OASIS-web2.jpg") no-repeat  center bottom scroll;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white; 
+}
+
+section.image-bg1-oasis {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+/*  overflow-y: hidden;*/
+  background: url("../images/OASIS-web3.jpg") no-repeat  center top scroll;
+  /* fallback for old browsers */
+  background: url("../images/OASIS-web3.jpg") no-repeat  center top scroll;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: url("../images/OASIS-web3.jpg") no-repeat  center top scroll;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white; 
+}
+
+.oasis-comment{
+  font-style: italic;
+  font-size: 18px;
+}
+
+section.image-bg2-oasis {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+/*  overflow-y: hidden;*/
+  background: url("../images/OASIS-web4.jpg") no-repeat  center top scroll;
+  /* fallback for old browsers */
+  background: url("../images/OASIS-web4.jpg") no-repeat  center top scroll;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: url("../images/OASIS-web4.jpg") no-repeat  center top scroll;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white; 
+}
+
+.highlights-content a{
+  color: #174a87;
+}
+
+.panel-collapse collapse in {
+  border: none;
+}
+
+section.content-high {
+  padding: 0;
+}
+
+img.oasis-color{
+  max-height: 50px;
+  margin-left: 10px;
+  border: solid 1px #999999;
+  border-radius: 50%;
+  padding: 1px
+  
+}
+
+input[type=radio]:checked + label {
+    border: 2px solid #ff6600;
+    position: relative;
+}
+
+
+
+
+
