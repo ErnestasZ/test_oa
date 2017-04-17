@@ -1,11 +1,12 @@
 <?php include "includes/header.php"; ?>
+<?php include ".ENV.php"; ?>
 
 
 <?php 
 
 
   if(isset($_POST['submit'])){
-    $to       = "ernestas.zemaitis@gmail.com";
+    $to       = $email;
     $subject  = wordwrap($_POST['subject'], 70);
     $body     = $_POST['body'];
     $header   = $_POST['email'];
