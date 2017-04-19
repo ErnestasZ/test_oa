@@ -300,18 +300,23 @@
             </div>
             
             <div class="row">
-              <div class="col-sm-2">
+              <div class="col-sm-6">
                <div class="checkbox">
-                <label>
-                  <input type="checkbox" name="floor-heating" value="250">Floor heating
-                </label>
+                  <label>
+                    <input type="checkbox" name="floor-heating" value="250">Floor heating
+                  </label>
+                </div>
+                <div class="checkbox">
                 <label>
                   <input type="checkbox" name="air-conditioning" value="190">Air conditioning
                 </label>
+                </div>
+                <div class="checkbox">
                 <label>
                   <input type="checkbox" name="solar-batery" value="850">Air conditioning
                 </label>
-                
+                </div>
+                <div class="checkbox">
                 <label>
                   <input type="checkbox" name="electrical-socket" value="110">Electrical socket
                 </label>

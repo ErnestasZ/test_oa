@@ -10,7 +10,7 @@ div.header-oasis1 {
   width: 100%;
   min-height: 700px;
 /*  overflow-y: hidden;*/
-  background: url("../images/OASIS-INTRO1_.jpg") no-repeat  center scroll;
+  background: url("../images/OASIS-INTRO1___.jpg") no-repeat  center scroll;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -26,12 +26,8 @@ div.header-oasis2 {
   width: 100%;
   min-height: 700px;
 /*  overflow-y: hidden;*/
-  background: url("../images/OASIS-INTRO2_.jpg") no-repeat  center scroll;
-  /* fallback for old browsers */
-  background: url("../images/OASIS-INTRO2_.jpg") no-repeat  center scroll;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../images/OASIS-INTRO2_.jpg") no-repeat  center scroll;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: url("../images/OASIS-INTRO2___.jpg") no-repeat  center scroll;
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -152,11 +148,7 @@ section.image-bg-oasis {
   min-height: 700px;
 /*  overflow-y: hidden;*/
   background: url("../images/OASIS-web2.jpg") no-repeat  center bottom scroll;
-  /* fallback for old browsers */
-  background: url("../images/OASIS-web2.jpg") no-repeat  center bottom scroll;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../images/OASIS-web2.jpg") no-repeat  center bottom scroll;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -170,11 +162,7 @@ section.image-bg1-oasis {
   min-height: 700px;
 /*  overflow-y: hidden;*/
   background: url("../images/OASIS-web3.jpg") no-repeat  center top scroll;
-  /* fallback for old browsers */
-  background: url("../images/OASIS-web3.jpg") no-repeat  center top scroll;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../images/OASIS-web3.jpg") no-repeat  center top scroll;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -193,11 +181,6 @@ section.image-bg2-oasis {
   min-height: 700px;
 /*  overflow-y: hidden;*/
   background: url("../images/OASIS-web4.jpg") no-repeat  center top scroll;
-  /* fallback for old browsers */
-  background: url("../images/OASIS-web4.jpg") no-repeat  center top scroll;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../images/OASIS-web4.jpg") no-repeat  center top scroll;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -217,21 +200,89 @@ section.content-high {
   padding: 0;
 }
 
-img.oasis-color{
-  max-height: 50px;
+label.oasis-color{
+  position: relative;
+/*  background-image: url("../images/OASIS2-SENDREQUEST.jpg");*/
+  background-size: cover;
+  height: 50px;
+  width: 50px;
   margin-left: 10px;
   border: solid 1px #999999;
   border-radius: 50%;
-  padding: 1px
+/*  display: inline-block;*/
   
 }
 
+
+
 input[type=radio]:checked + label {
-    border: 2px solid #ff6600;
+    border: 2px solid #ff6600 !important;
     position: relative;
 }
 
 
+/*OASIS 2 __________________________________________________________*/
+
+.header-oasisII {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+/*  overflow-y: hidden;*/
+  background: url("../images/OASIS2-SENDREQUEST.jpg") no-repeat center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white; 
+}
 
 
 
+input[type=radio] {
+/*    display: none;*/
+}
+
+input[type=radio]:cheched{
+  padding: 5px;
+  border-color: green;
+  
+}
+
+
+
+.table-adds{
+  margin: 0;
+}
+
+.table-adds tr td{
+  vertical-align: bottom !important;
+   border: none !important;
+  
+}
+
+.adds-p{
+  margin-bottom: 0;
+}
+
+input.input-adds{
+  position: relative !important;
+  margin-bottom: 5px;
+/*  margin-right: -70px !important;*/
+  
+}
+
+#rowclick1{
+  max-width: 350px;
+  text-align: center !important;
+}
+
+td.smaller{
+  width: 130px;
+}
+
+.checkbox input[type=checkbox]{
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+/*  display: none;*/
+}
