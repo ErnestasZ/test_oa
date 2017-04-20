@@ -90,7 +90,7 @@
            
             <div class="row" >
                
-                <div class="col-sm-6 col-sm-offset-3">
+              <div class="col-sm-6 col-sm-offset-3">
                     <h1 class="oasis-cont">ADDS</h1>
                 
                 
@@ -110,17 +110,77 @@
                     </label>
                   </div>
                   
+                   <div class="checkbox">
+                    <label>
+                     <table for="air" class="table table-adds">
+                       <tbody>
+                         <tr>
+                           <td><input id="air" type="checkbox" name="air-conditioning" value="190" class="input-adds"></td>
+                           <td><img src="images/icons/air_conditioning.png" alt=""><p class="adds-p">Air conditioning</p></td>
+                           <td>190 EUR</td>
+                         </tr>
+                       </tbody>
+                      </table>
+                    </label>
+                  </div>
+                  
+                  
                   <div class="checkbox">
+                    <label>
+                     <table for="baterry" class="table table-adds">
+                       <tbody>
+                         <tr>
+                           <td><input id="baterry" type="checkbox" name="solar-batery" value="850" class="input-adds"></td>
+                           <td><img src="images/icons/solar_battery.png" alt=""><p class="adds-p">Solar battery</p></td>
+                           <td>850 EUR</td>
+                         </tr>
+                       </tbody>
+                      </table>
+                    </label>
+                  </div>
+                  
+                  <div class="checkbox">
+                    <label>
+                     <table for="socket" class="table table-adds">
+                       <tbody>
+                         <tr>
+                           <td><input id="socket" type="checkbox" name="electrical-socket" value="110" class="input-adds"></td>
+                           <td><img src="images/icons/socket.png" alt="" class="image-socket"><p class="adds-p">Electrical socket</p></td>
+                           <td>110 EUR</td>
+                         </tr>
+                       </tbody>
+                      </table>
+                    </label>
+                  </div>
+                  
+                  <div class="checkbox">
+                    <label>
+                           <input id="oasis2" type="hidden" name="oasis2" value="3600" class="input-adds">
+                    </label>
+                  </div>
+                  
+                  <div class="checkbox">
+                    <label for="test">
+                           <input id="test" type="checkbox" name="test" value="3600" class="input-adds">
+                           <span class="custom-check"></span>
+                           Tekstas testas
+                    </label>
+                  </div>
+                  
+                  
                     
+<!--
                      <table class="table table-adds" id="rowclick1">
                        <tbody>
+                       <div class="checkbox">
                         <label for="air" style="cursor: hand;">
                          <tr style="cursor: hand;">
                            <td><input id="air" type="checkbox" name="air-conditioning" value="190" class="input-adds"></td>
-                           <td class="smaller"><img src="images/icons/air_conditioning.png" alt=""><p class="adds-p">Air conditioning</p></td>
+                           <td class="smaller"><img src="images/icons/air_conditioning.png" alt="" class="image-so"><p class="adds-p">Air conditioning</p></td>
                            <td>190 EUR</td>
                          </tr>
                          </label>
+                         </div>
                          <label for="baterry" style="cursor: hand;">
                          <tr style="cursor: hand;">
                            <td><input id="baterry" type="checkbox" name="solar-batery" value="850" class="input-adds"></td>
@@ -137,32 +197,18 @@
                          </label>
                        </tbody>
                       </table>
+-->
                     
                   </div>
-                  
-                
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" name="air-conditioning" value="190">Air conditioning
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" name="solar-batery" value="850">Air conditioning
-                    </label>
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" name="electrical-socket" value="110">Electrical socket
-                    </label>
-                  </div>
+
+
                 </div>
                 
-                </div>
+              </div>
                 
             </div>    
                 
-        </div>
+<!--        </div>-->
     </section>
     
     <div class="row">
