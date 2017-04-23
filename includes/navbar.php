@@ -5,20 +5,24 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="images/oasis-logo2.png" class="logo" alt="OASIS dome"></a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                  <div class="nav-logo">
+<!--                    <img src="images/oasis-logo2.png" class="logo" alt="OASIS dome">-->
+                  </div>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#download">Order</a>
+                        <a class="page-scroll" href="#order">Order</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#features">Contact</a>
+                        <a class="page-scroll" href="#features">Features</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Meniu</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>

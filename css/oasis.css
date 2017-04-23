@@ -1,8 +1,23 @@
 @import "new-age.css";
 
-.logo {
-  height: 30px;
+
+.nav-logo {
+  width: 75px;
+  height: 31px;
   margin-top: -5px; important!
+  position: absolute;
+/*  height: 100%;*/
+  background: url("../images/oasis-logo2.png") no-repeat ;
+  background-size: cover;
+}
+
+.navbar-default .navbar-header .navbar-brand .nav-logo:hover,
+.navbar-default .navbar-header .navbar-brand .nav-logo:focus {
+/*  color: #fcbd20;*/
+  background: url("../images/OASIS-LOGO-juodas.png") no-repeat !important;
+  width: 75px;
+  height: 31px;
+  position: absolute;
 }
 
 div.header-oasis1 {
@@ -17,8 +32,6 @@ div.header-oasis1 {
   -o-background-size: cover;
   background-size: cover;
   color: white; 
-  animation:fade 8s infinite;
-  -webkit-animation:fade 8s infinite;
 }
 
 div.header-oasis2 {
@@ -33,8 +46,6 @@ div.header-oasis2 {
   -o-background-size: cover;
   background-size: cover;
   color: white; 
-  animation:fade1 8s infinite;
-  -webkit-animation:fade1 8s infinite;
 }
 
 
@@ -142,10 +153,10 @@ section.content-oasis {
   color: #174a87;
 }
 
-section.image-bg-oasis {
+div.image-bg-oasis {
   position: relative;
-  width: 100%;
-  min-height: 700px;
+  width: 100% !important;
+  min-height: 100% !important;
 /*  overflow-y: hidden;*/
   background: url("../images/OASIS-web2.jpg") no-repeat  center bottom scroll;
   
@@ -159,7 +170,7 @@ section.image-bg-oasis {
 section.image-bg1-oasis {
   position: relative;
   width: 100%;
-  min-height: 700px;
+  min-height: 100%;
 /*  overflow-y: hidden;*/
   background: url("../images/OASIS-web3.jpg") no-repeat  center top scroll;
   
@@ -178,13 +189,25 @@ section.image-bg1-oasis {
 section.image-bg2-oasis {
   position: relative;
   width: 100%;
-  min-height: 700px;
+  min-height: 100%;
 /*  overflow-y: hidden;*/
   background: url("../images/OASIS-web4.jpg") no-repeat  center top scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: white; 
+}
+
+section.img-bg-oasis{
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: url("../images/OASIS-Puzero-6.jpg") no-repeat  center bottom scroll;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
   color: white; 
 }
 
@@ -221,14 +244,76 @@ input[type=radio]:checked + label {
 }
 
 
+section.home-send-request{
+/*  background-color: #dfdfdf !important;*/
+/*  padding: 50px 0 !important;*/
+}
+
+.request{
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden
+  
+}
+
+.oasis-i-h3 {
+  margin-bottom: -5px;
+}
+
+.wind-icon{
+  margin: 8px 0;
+}
+
+.recycle-icon {
+  height: 86px;
+}
+
+.sertification-icon{
+  margin: 0 15px;
+}
+
+
+.content-features{
+  margin-top: -15px;
+}
+
+.storage{
+  text-align: left;
+}
+
+.storage span{
+  font-size: 1.2em
+}
+
+div.out{
+  height: 65vh;
+}
+
+div.out .inner{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+img.ventilation{
+  padding: 0 30px;
+}
+
+.press-icon img{
+  max-height: 40px;
+}
+
+.press-icon{
+  height: 40px;
+}
 /*OASIS 2 __________________________________________________________*/
 
-.header-oasisII {
+section.header-oasis {
   position: relative;
   width: 100%;
-  min-height: 700px;
+  min-height: 500px !important;
 /*  overflow-y: hidden;*/
-  background: url("../images/OASIS2-SENDREQUEST.jpg") no-repeat center scroll;
+  background: url("../images/request/SENDREQUEST2.jpg") no-repeat center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -298,6 +383,82 @@ td.smaller{
   margin: 9px 0;
 }
 
+
+
+/*bandymas checkbox*/
+
 .checkbox input#test[type=checkbox]{
+  display: none;
+}
+
+.custom-check {
+		display: inline-block;
+		width: 25px; height: 25px;
+		background: white;
+		border: 2px solid #CCCCCC;
+    border-radius: 50%;
+		font-family: 'Glyphicons Halflings';
+		font-size: 10px;
+		line-height: 1;
+    margin
+	}
+
+.custom-check::before {
+  content: "\e013";
+  background-color: #424242;
+  display: none;
+  border-radius: 50%;
+  width: 25px; height: 25px;
+  border: 2px solid #CCCCCC;
+}
+
+.checkbox input#test[type=checkbox]:checked+.custom-check::before {
+  display: block;
+  color: white;
+  background-color: #424242;
+}
+
+/*bandymo checkbox pabaiga*/
+
+.color-pick{
+  border: none !important;
+/*  max-height: 400px;*/
+}
+
+.color-pick img{
+/*  max-height: 400px;*/
+}
+
+
+.oasis2-cont{
+  background-color: #dfdfdf !important;
+/*  padding: 50px 0 !important;*/
+}
+
+/*footer-------------------------*/
+
+.footer-contact{
+  text-align: left !important;
+}
+
+.highlights-footer a{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.highlights-footer a:hover {
+  color: #fdcc52;
+  text-decoration: none;
+}
+
+.highlights-footer a:focus{
+  text-decoration: none;
+}
+
+.footer-adress{
+  text-align: right!important;
+}
+
+/*CONTACT FORM----------------------*/
+#success_message{
   display: none;
 }
