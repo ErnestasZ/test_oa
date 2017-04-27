@@ -245,7 +245,7 @@
                         <h1 class="oasis-cont">OASIS 2</h1>
                         <p>CAPACITY 2 PERSONS</p>
                         <h3>from 3600 EUR</h3>
-                        <p><button class="btn btn-outline btn-xl page-scroll">ORDER</button></p>
+                        <p><button class="btn btn-outline btn-xl">ORDER</button></p>
                       </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                         <h1 class="oasis-cont">OASIS 4</h1>
                         <p>CAPACITY 4 PERSONS</p>
                         <h3>from 4400 EUR</h3>
-                        <p><button class="btn btn-outline btn-xl page-scroll">ORDER</button></p>
+                        <p><a href="oasis2_new.php" class="btn btn-outline btn-xl">ORDER</a></p>
                       </div>
                     </div>
 <!--
@@ -815,7 +815,7 @@
                     <div class="form-group">
                       <label class="col-md-4 control-label"></label>
                       <div class="col-md-4">
-                        <button type="submit" class="btn btn-warning" >Send </button>
+                        <button type="submit" class="btn btn-outline btn-xl" >Send </button>
                       </div>
                     </div>
 

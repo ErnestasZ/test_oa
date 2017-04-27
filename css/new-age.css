@@ -68,11 +68,11 @@ p {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-  color: #fdcc52;
+  color: #d55602;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #fcbd20;
+  color: #d55602;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-size: 12px;
@@ -91,11 +91,11 @@ p {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #fdcc52;
+  color: #d55602;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #fdcc52 !important;
+  color: #d55602 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -388,18 +388,20 @@ footer ul li a.active {
   padding-right: 0;
   padding-left: 0;
 }
+
 .btn-outline {
   color: white;
   border-color: white;
   border: 1px solid;
+  background-color: #ff6600 !important;  /*pasalinus permatoma*/
 }
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background-color: #fdcc52;
-  border-color: #fdcc52;
+  background-color: #d55602;
+  border-color: #d55602;
 }
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -410,7 +412,7 @@ footer ul li a.active {
 }
 .btn-xl {
   padding: 15px 45px;
-  font-size: 11px;
+  font-size: 13px;
 }
 ::-moz-selection {
   color: white;

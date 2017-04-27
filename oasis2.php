@@ -1,7 +1,7 @@
 <?php include "includes/header.php";?>
 
  
-  <section class=header-oasis>
+  <section class="header-oasis">
    
     <div class="header-oasisII mySlides">
         <div class="container">

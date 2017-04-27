@@ -1,19 +1,17 @@
 <?php include "includes/header.php";?>
+<?php include "includes/navbar2.php";?>
+
 
  
-  <header class=header-oasis>
+  <header>
    
-    <div class="header-oasisII mySlides">
+    <div class="header-oasisII-bg">
         <div class="container">
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
-                    <div class="oasis-header">
-                        <div class="header-content-inner">
-                            <h1>OASIS II</h1>
-                            
-                            
-                        </div>
-                    </div>
+                    
+                      
+                    
                 </div>
             </div>
         </div>
@@ -36,12 +34,12 @@
             </div>
             
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-6 col-sm-offset-3">
                 <div class="thumbnail color-pick">
-                  <img src="images/OASIS_2.png" alt="">
+                  <img src="images/OASIS_2.png" alt="" class="img-responsive">
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-6 col-sm-offset-3">
                 <div class="choose-color">
                   <h3 class="oasis-cont">Choose oasis color</h3>
                   
@@ -222,14 +220,14 @@
       High 2.65m / 8,69 ft, <br>
       Floors 4.6m2 / 49,5 sq ft, 
       Storage space 1.4m3 / 15 sq ft.</p>
-      <div class="thumbnail color-pick">
+      <div class="thumbnail color-pick thumb-color">
         <img src="images/OASIS-2-dim.png" alt="">
       </div>
     </div>
     <div class="col-sm-6">
       
       <h1 class="oasis-cont">Assembly duration</h1>
-      <div class="thumbnail color-pick">
+      <div class="thumbnail color-pick thumb-color">
         <img src="images/ASSEMBLY-OASIS-2.png" alt="">
       </div>
     </div>
@@ -271,7 +269,7 @@
     <div class="col-sm-6">
       <h1 class="oasis-cont">OASIS 2 package</h1>
       <p>2.4m x 0.8m, h=0.54m / 94.4in x 31.4in, h=21.2in 280Kg / 617lbs</p>
-       <div class="thumbnail color-pick">
+       <div class="thumbnail color-pick thumb-color">
         <img src="images/OASIS-2-package.png" alt="">
       </div>
     </div>
@@ -290,86 +288,4 @@
     
     
     
-    
-    
-    
-    
-
-    
-    
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; OASIS</p>
-            <ul class="list-inline">
-                <li>
-                    <a href="#">Meniu</a>
-                </li>
-                <li>
-                    <a href="#">Meniu1</a>
-                </li>
-                <li>
-                    <a href="#">Meniu2</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/jquery/fadeSlideShow.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/new-age.min.js"></script>
-    
-    <script>
-      var myIndex = 0;
-      carousel();
-
-      function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-             x[i].style.display = "none";  
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}    
-          x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 3000); // Change image every 2 seconds
-      }
-      </script>
-      
-      <script>
-        
-        $(document).ready(function() {
-          $('#rowclick1 tr').click(function(event) {
-            if (event.target.type !== 'checkbox') {
-              $(':checkbox', this).trigger('click');
-            }
-          });
-        });
-      </script>
-
-<!--
-  <script type="text/javascript">
-    $(function() {
-    $('.fadein header:gt(0)').hide();
-
-    setInterval(function () {
-        $('.fadein :first-child').fadeOut()
-                                 .next('header')
-                                 .fadeIn()
-                                 .end()
-                                 .appendTo('.fadein');
-    }, 4000); // 4 seconds
-    });
-  </script>
--->
-</body>
-
-</html>
+  
