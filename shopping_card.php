@@ -78,7 +78,7 @@ if(!isset($_POST["delete"])){
   if(!isset($_POST["delete"]) && !empty($_POST)) {
     ?>
    <form action="shopping_card.php" method="post">
-     <input type="submit" name="delete" placeholder="REMOVE">
+     <input type="submit" name="delete" value="REMOVE">
    </form>
    <?php
   } else {

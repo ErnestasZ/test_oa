@@ -245,7 +245,7 @@
                         <h1 class="oasis-cont">OASIS 2</h1>
                         <p>CAPACITY 2 PERSONS</p>
                         <h3>from 3600 EUR</h3>
-                        <p><button class="btn btn-outline btn-xl">ORDER</button></p>
+                        <p><a href="oasis2_new.php" class="btn btn-outline btn-xl">ORDER</a></p>
                       </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                         <h1 class="oasis-cont">OASIS 4</h1>
                         <p>CAPACITY 4 PERSONS</p>
                         <h3>from 4400 EUR</h3>
-                        <p><a href="oasis2_new.php" class="btn btn-outline btn-xl">ORDER</a></p>
+                        <p><a href="oasis4_new.php" class="btn btn-outline btn-xl">ORDER</a></p>
                       </div>
                     </div>
 <!--
@@ -501,8 +501,8 @@
                 </div>
              </div>
   </div>
-    
-   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="container">
+   <div id="carousel-example-generic" class="carousel slide carousel-oasis" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -598,7 +598,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-  
+
+</div>
 </section>
    
     

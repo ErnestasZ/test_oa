@@ -51,6 +51,12 @@
           <div class="form-group">
             <textarea class="form-control" name="body" id="body" cols="50" rows="10"></textarea>
           </div>
+          
+          <div class="form-group">
+            <label for="number" class="sr-only">Subject</label>
+            <input type="number" name="number" class="form-control" id="number" value="1 ">
+          </div>
+          
 
           <input type="submit" name="submit" class="btn btn-custom btn-lg btn-block" id="btn-login" value="submit">
         </form>
