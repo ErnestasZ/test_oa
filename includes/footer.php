@@ -81,7 +81,7 @@
     
     <script>
       var myIndex = 0;
-      carousel();
+      
 
       function carousel() {
           var i;
@@ -94,6 +94,8 @@
           x[myIndex-1].style.display = "block";  
           setTimeout(carousel, 3000); // Change image every 2 seconds
       }
+      
+      carousel();
       </script>
 
 <!--

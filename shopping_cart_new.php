@@ -7,28 +7,42 @@
   echo "<br>";
   echo "<br>";
   
-  print_r($_POST);
+//  print_r($_POST);
   echo "<br>";
   
   
  
   if(isset($_POST['submit'])){
+//      unset($_POST['submit']);
+      $total = 0;
       $order = array($_POST);
+//     unset($order['submit']);
       $_SESSION['cart'] [] = $order;
-    
+//      unset($_SESSION['cart'][8]);
+     
+      $index_count = 0;
       foreach($_SESSION['cart'] as $items){
         $card_items = $items[0];
-        print_r($card_items);
-//        foreach($card_item as $key => $val){
-//          echo $key . " " . $val . "; ";
-//        }
+//        print_r($card_items);
+        echo $index_count . ": ";
+        echo array_sum($card_items);
+        $total += array_sum($card_items);
+        $index_count += 1;
+        foreach($card_items as $key => $val){
+          echo $key . " " . $val . "; " . " ";
+//          $product_total += $val;
+//          echo $product_total;
+        }
         echo "<br>";
       }
+    echo $total;
     } 
-
-    
-  
-  print_r($_SESSION['cart']);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    print_r($_SESSION['cart']);
+//  print_r($cart);
+//  print_r($_SESSION['cart']);
 //  $_SESSION['cart'] = array();
 
 //echo $_SESSION['cart'][4][0]['electrical-socket'];
