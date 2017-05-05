@@ -1,6 +1,8 @@
 <?php include "includes/header.php";?>
 
- <?php include "includes/navbar.php";?>   
+<?php include "includes/navbar.php";?>  
+ 
+  
   <header class=header-oasis>
    
     <div class="header-oasis1 mySlides">
@@ -89,6 +91,16 @@
     
     <section class=" text-center content-oasis">
         <div class="container">
+           
+         <?php 
+//            global $_SESSION['cart'];
+            if(count($_SESSION['cart']) == 0){
+              echo "Tuscias";
+            } else {
+              echo "Prekiu krepselyje yra";
+            }
+          
+          ?>
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <h1 class="oasis-cont">Ideal for your hobby</h1>

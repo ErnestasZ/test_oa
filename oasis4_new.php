@@ -23,7 +23,7 @@
   
   
   
-<form class="form-group" action="shopping_card.php" method="post"> 
+<form class="form-group" action="shopping_cart_new.php" method="post"> 
    
     <section class="download bg-primary text-center content-oasis">
         <div class="container">
@@ -98,7 +98,7 @@
                      <table for="floor" class="table table-adds">
                        <tbody>
                          <tr>
-                           <td><input id="floor" type="checkbox" name="floor-heating4" value="400" class="input-adds"></td>
+                           <td><input id="floor" type="checkbox" name="floor-heating" value="400" class="input-adds"></td>
                            <td><img src="images/icons/floor_heating.png" alt=""><p class="adds-p">Floor heating</p></td>
                            <td>400 EUR</td>
                          </tr>
@@ -112,7 +112,7 @@
                      <table for="air" class="table table-adds">
                        <tbody>
                          <tr>
-                           <td><input id="air" type="checkbox" name="air-conditioning4" value="250" class="input-adds"></td>
+                           <td><input id="air" type="checkbox" name="air-conditioning" value="250" class="input-adds"></td>
                            <td><img src="images/icons/air_conditioning.png" alt=""><p class="adds-p">Air conditioning</p></td>
                            <td>250 EUR</td>
                          </tr>
@@ -127,7 +127,7 @@
                      <table for="baterry" class="table table-adds">
                        <tbody>
                          <tr>
-                           <td><input id="baterry" type="checkbox" name="solar-batery4" value="850" class="input-adds"></td>
+                           <td><input id="baterry" type="checkbox" name="solar-battery" value="850" class="input-adds"></td>
                            <td><img src="images/icons/solar_battery.png" alt=""><p class="adds-p">Solar battery</p></td>
                            <td>850 EUR</td>
                          </tr>
@@ -141,7 +141,7 @@
                      <table for="socket" class="table table-adds">
                        <tbody>
                          <tr>
-                           <td><input id="socket" type="checkbox" name="electrical-socket4" value="120" class="input-adds"></td>
+                           <td><input id="socket" type="checkbox" name="electrical-socket" value="120" class="input-adds"></td>
                            <td><img src="images/icons/socket.png" alt="" class="image-socket"><p class="adds-p">Electrical socket</p></td>
                            <td>120 EUR</td>
                          </tr>

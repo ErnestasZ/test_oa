@@ -124,10 +124,10 @@
                   
                   <div class="checkbox">
                     <label>
-                     <table for="baterry" class="table table-adds">
+                     <table for="battery" class="table table-adds">
                        <tbody>
                          <tr>
-                           <td><input id="baterry" type="checkbox" name="solar-batery" value="850" class="input-adds"></td>
+                           <td><input id="battery" type="checkbox" name="solar-battery" value="850" class="input-adds"></td>
                            <td><img src="images/icons/solar_battery.png" alt=""><p class="adds-p">Solar battery</p></td>
                            <td>850 EUR</td>
                          </tr>

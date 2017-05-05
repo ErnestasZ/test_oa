@@ -1,5 +1,6 @@
 <?php include "includes/header.php";?>
-<?php include "includes/navbar2.php";?>
+<?php include "includes/navbar3.php";?>
+<?php include "classes.php";?>
 
 
 <?php session_start();
@@ -12,40 +13,83 @@
   
   
  
-  if(isset($_POST['submit'])){
-//      unset($_POST['submit']);
-      $total = 0;
-      $order = array($_POST);
-//     unset($order['submit']);
-      $_SESSION['cart'] [] = $order;
-//      unset($_SESSION['cart'][8]);
-     
-      $index_count = 0;
-      foreach($_SESSION['cart'] as $items){
-        $card_items = $items[0];
-//        print_r($card_items);
-        echo $index_count . ": ";
-        echo array_sum($card_items);
-        $total += array_sum($card_items);
-        $index_count += 1;
-        foreach($card_items as $key => $val){
-          echo $key . " " . $val . "; " . " ";
-//          $product_total += $val;
-//          echo $product_total;
-        }
-        echo "<br>";
-      }
-    echo $total;
-    } 
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    print_r($_SESSION['cart']);
-//  print_r($cart);
-//  print_r($_SESSION['cart']);
-//  $_SESSION['cart'] = array();
+  if(isset($_POST['submit']) && !isset($_POST['update'])){
+    
+//    set ADDS_____________________________
+    $adds = array();
+    if(isset($_POST['floor-heating'])){
+      $item = new AddsItem();
+      $item->name = "Floor Heating";
+      $item->price = $_POST['floor-heating'];
+      array_push($adds, $item);
+      
+    }
+    if(isset($_POST['air-conditioning'])){
+      $item = new AddsItem();
+      $item->name = "Air Conditioning";
+      $item->price = $_POST['air-conditioning'];
+      array_push($adds, $item);
+      
+    }
+    if(isset($_POST['solar-battery'])){
+      $item = new AddsItem();
+      $item->name = "Solar Battery";
+      $item->price = $_POST['solar-battery'];
+      array_push($adds, $item);
+      
+    }
+    if(isset($_POST['electrical-socket'])){
+      $item = new AddsItem();
+      $item->name = "Electrical Socket";
+      $item->price = $_POST['electrical-socket'];
+      array_push($adds, $item);
+      
+    }
+//    unset($adds);
+//    print_r($adds);
+    
+//    create product session with adds________________
+    if(isset($_POST['oasis2'])){
+      $product = new Product();
+      $product->name = 'Oasis2';
+      $product->price = $_POST['oasis2'];
+      $product->quantity = 1;
+      $product->adds = $adds;
+      $_SESSION['cart'][] = $product;
+      echo count($_SESSION['cart']);
+    }
+    
+    if(isset($_POST['oasis4'])){
+      $product = new Product();
+      $product->name = 'Oasis4';
+      $product->price = $_POST['oasis4'];
+      $product->quantity = 1;
+      $product->adds = $adds;
+      $_SESSION['cart'][] = $product;
+      echo count($_SESSION['cart']);
+    }
+    
+  }
+//_________Delete items__________________________
+  if(isset($_GET['index']) && !isset($_POST['update'])){
+    $cart = unserialize(serialize($_SESSION['cart']));
+    unset($cart[$_GET['index']]);
+    $cart = array_values($cart);
+    $_SESSION['cart'] = $cart;
+  }
 
-//echo $_SESSION['cart'][4][0]['electrical-socket'];
+//_____________Update items_________________
+if(isset($_POST['update'])){
+  $arrQty = $_POST['quantity'];
+  $cart = unserialize(serialize($_SESSION['cart']));
+  for($i = 0; $i < count($cart); $i++){
+    $cart[$i]->quantity = $arrQty[$i];
+  }
+  $_SESSION['cart'] = $cart;
+}
+  
+
+
  
 ?>
 
@@ -56,12 +100,13 @@
    
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <h1 class="oasis-cont count-oasisII content-features">SEND A Quote for your choose OASIS </h1>
+                <div class="col-sm-5">
+                    <h1 class="oasis-cont count-oasisII content-features">SEND A Quote for your chosen OASIS </h1>
                       
                     
                 </div>
             </div>
+           
         </div>
     
     
@@ -71,7 +116,7 @@
   
   
   <section class="cart-template">
-   <form action="" class="form-group" method="post">
+   <form action="shopping_cart_new.php" class="form-group" method="post">
      
      <div class="container">
        <div class="row">
@@ -89,37 +134,43 @@
                   </tr>
                 </thead>
                 <tbody>
-                 <tr>
-                  <td>1</td>
-                  <td><a href="oasis2_new.php" alt="">Oasis 2</a></td>
-                  <td>
-                    Floor heating<br>
-                    Solar battery<br>
-                    Air conditioning
-                  </td>
+                <?php
+                  $cart = unserialize(serialize($_SESSION['cart']));
+                  $total = 0;
+                  $index = 0;
+//                  print_r($cart);
+                  for($i=0; $i<count($cart); $i++){
                     
-                  <td class="col-sm-1">
-                    <div class="cart-number"><input type="number" value="1" class="form-control" id=""></div>
-                  </td>
-                  <td>3600 EUR</td>
-                  <td>remove</td>
-                  </tr>
+                ?>
+                
                   <tr>
-                  <td>2</td>
-                  <td><a href="oasis4_new.php" alt="">Oasis 4</a></td>
-                  <td>
-                    Floor heating<br>
-                    Solar battery<br>
-                    Air conditioning
-                  </td>
-                    
-                  <td class="col-sm-2">
-                    <div class="cart-number"><input type="number" value="1" class="form-control" id=""></div>
-                  </td>
-                  <td>3600 EUR</td>
-                  
-                  <td>remove</td>
+                    <td><?php $number = $i + 1;
+                              echo $number; ?></td>
+                    <td><?php echo $cart[$i]->name . " - " . $cart[$i]->price . " EUR"; ?></td>
+                    <td><?php
+                            $addsPrice = 0;
+                            foreach($cart[$i]->adds as $add){
+                              echo $add->name . " - " . $add->price . " EUR<br>";
+                              $addsPrice += $add->price;
+                            }
+
+                          ?></td>
+                    <td class="col-sm-2">
+                      <div class="cart-number">
+                        <input type='number' value='<?php echo $cart[$i]->quantity; ?>' class="form-control" min="1" max="50" name="quantity[]">
+                      </div>
+                    </td>
+                    <td><?php echo ($cart[$i]->quantity * ($cart[$i]->price + $addsPrice)) . " EUR"; ?></td>
+                    <td><a href="shopping_cart_new.php?index=<?php echo $index; ?>" alt="">remove</a></td>
                   </tr>
+                 
+                   
+                <?php $total += $cart[$i]->quantity * ($cart[$i]->price + $addsPrice);
+                      $index++;
+                  } ?>
+                 
+                
+               
                 </tbody>
               </table>
             </div>
@@ -131,10 +182,10 @@
            <h3>total</h3>
          </div>
          <div class="col-xs-3">
-           <h3>7200 EUR</h3>
+           <h3><?php echo $total . " EUR"; ?></h3>
          </div>
          <div class="col-xs-2">
-           <input type="submit" name="refresh" value="refresh" class="btn ntn-default">
+           <input type="submit" name="update" value="refresh" class="btn ntn-default">
          </div>
        </div>
        
