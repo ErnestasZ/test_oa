@@ -473,10 +473,54 @@ td.smaller{
 /****************Shopping Cart******************/
 
 div.cart-number{
-  max-width: 70px !important;
+  max-width: 100px !important;
   text-align: center;
 }
 
+/*
 .table-qty{
-  width: 70px;
+  text-align: center;
+}
+*/
+
+.form-margin-top{
+  margin-top: 25px;
+}
+
+#cart-refresh{
+  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  text-transform: capitalize;
+  letter-spacing: 0;
+  padding: 0 8px;
+  font-size: 14px;
+
+}
+
+.cart-header{
+  padding: 100px 0 0 0;
+}
+
+.cart-template{
+  padding: 0 0 0 0;
+}
+
+.cart-jumbotron{
+  margin-top: 80px;
+}
+
+.cart-total{
+  margin-top: 0;
+}
+
+.text-muted{
+  font-size: 12px;
+}
+
+.cart-contact{
+  margin: 0 0 0 0;
+  padding: 50px 0 0 0;
+}
+
+.form-div{
+  padding-bottom: 50px;
 }

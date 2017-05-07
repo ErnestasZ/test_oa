@@ -4,12 +4,7 @@
 
 
 <?php session_start();
-  echo "<br>";
-  echo "<br>";
-  echo "<br>";
-  
-//  print_r($_POST);
-  echo "<br>";
+
   
   
  
@@ -85,9 +80,17 @@ if(isset($_POST['update'])){
   }
   $_SESSION['cart'] = $cart;
 }
-  
 
- 
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+//_____________Oreder request______________
+if(isset($_POST['order-request'])){
+  print_r($_POST['order-request']);
+}
+
+
 ?>
 
 
@@ -98,13 +101,13 @@ if(isset($_POST['update'])){
     
 ?>
           <div class="container">
-           <div class="jumbotron">
+           <div class="jumbotron cart-jumbotron">
              
               <h1>Prekiu krepselis tuscias</h1>
                 <p>Parasyti kazkoki teksta del tuscio prekiu krepselio</p>
-                <p><a class="btn btn-primary btn-lg" href="index.php" role="button">Back to OASIS</a></p>
+                <p><a class="btn btn-outline " href="index.php" role="button">Back to OASIS</a></p>
             </div>
-            </div>
+          </div>
  <?php
   } else {
  ?> 
@@ -114,8 +117,8 @@ if(isset($_POST['update'])){
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
-                    <h1 class="oasis-cont count-oasisII content-features">SEND A Quote for your chosen OASIS </h1>
+                <div class="col-sm-12">
+<!--                    <h1 class="oasis-cont count-oasisII content-features">SEND A Quote for your chosen OASIS </h1>-->
                       
                     
                 </div>
@@ -142,7 +145,9 @@ if(isset($_POST['update'])){
                   <th>#</th>
                   <th>Name</th>
                   <th>Adds</th>
-                  <th class="table-qty">Qty</th>
+                  <th>
+                    <input type="submit" name="update" value="Qty / Refresh" id="cart-refresh" class="btn btn-default btn-xs" >
+                  </th>
                   <th>Price</th>
                   <th>Delete</th>
                   </tr>
@@ -160,18 +165,27 @@ if(isset($_POST['update'])){
                   <tr>
                     <td><?php $number = $i + 1;
                               echo $number; ?></td>
-                    <td><?php echo $cart[$i]->name . " - " . $cart[$i]->price . " EUR"; ?></td>
+                    <td><?php echo $cart[$i]->name; ?>
+                     <span class="text-muted"> <?php echo "(" .$cart[$i]->price . " EUR)"; ?></span></td>
                     <td><?php
                             $addsPrice = 0;
                             foreach($cart[$i]->adds as $add){
-                              echo $add->name . " - " . $add->price . " EUR<br>";
+                              echo $add->name;
+                              ?>
+                               
+                                <span class="text-muted">   
+                              <?php 
+                                echo "(" . $add->price . " EUR)<br>";
+                              ?>
+                              </span>
+                              <?php
                               $addsPrice += $add->price;
                             }
 
                           ?></td>
                     <td class="col-sm-2">
                       <div class="cart-number">
-                        <input type='number' value='<?php echo $cart[$i]->quantity; ?>' class="form-control" min="1" max="50" name="quantity[]">
+                        <input type='number' value='<?php echo $cart[$i]->quantity; ?>' class="form-control table-qty" min="1" max="50" name="quantity[]">
                       </div>
                     </td>
                     <td><?php echo ($cart[$i]->quantity * ($cart[$i]->price + $addsPrice)) . " EUR"; ?></td>
@@ -191,16 +205,14 @@ if(isset($_POST['update'])){
          </div>
        </div>
        
+       
        <div class="row">
-         <div class="col-xs-3 col-xs-offset-4">
-           <h3>total</h3>
+         
+         <div class="col-xs-12" align="center">
+           <h2 class="cart-total">Total <?php echo $total . " EUR"; ?>*</h2>
+           <p>*Total price without shipping, please ... bla bla bla ... reikia teksto</p>
          </div>
-         <div class="col-xs-3">
-           <h3><?php echo $total . " EUR"; ?></h3>
-         </div>
-         <div class="col-xs-2">
-           <input type="submit" name="update" value="refresh" class="btn ntn-default">
-         </div>
+
        </div>
        
        
@@ -219,29 +231,35 @@ if(isset($_POST['update'])){
   
 <!--  Fill contact for order _____________________-->
   
-   <section  class=" content-oasis">
+   <section  class="cart-contact">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                  <h1 class="oasis-cont content-features">Have a question?</h1>
-                  <p>Get in touch! We'd love to hear from you.</p>
+                <div class="col-sm-12">
+                  <h1 class="oasis-cont content-features">Fill in your shipping address</h1>
                 </div>
             </div>
+     </div>
             
-            
-            <form class="well form-horizontal" data-toggle="validator" role="form">
+     <div class="oasis2-cont form-div">      
+           <div class="container">
+            <form action="order_sent.php" class="" data-toggle="validator" role="form" method="post">
                
                <h3>Customer information</h3>
                 
                 <div class="row">
                  <div class="col-sm-6">
                      <div class="form-group">
-                      <label for="inputEmail" class="control-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+<!--                      <label for="inputEmail" class="control-label">Email</label>-->
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required name="email">
                       <div class="help-block with-errors"></div>
                     </div>
                  </div>
-                 
+                 <div class="col-sm-6">
+                  <div class="form-group">
+<!--                    <label for="inputPhone" class="control-label">Phone</label>-->
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone (optional)" name="phone">
+                  </div>
+                </div>
                </div>
                
                <h3>Shipping address</h3>
@@ -250,95 +268,96 @@ if(isset($_POST['update'])){
                  <div class="col-sm-6">
                     <div class="form-group">
 <!--                      <label for="inputName" class="control-label">Name</label>-->
-                      <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                      <input type="text" class="form-control" id="inputName" data-error="What your Name?" placeholder="Name" required name="name">
+                      <div class="help-block with-errors"></div>
                     </div>
                  </div>
                  <div class="col-sm-6">
                     <div class="form-group">
-<!--                      <label for="inputName" class="control-label">Surname</label>-->
-                      <input type="text" class="form-control" id="inputName" placeholder="Surname" required>
+<!--                      <label for="inputSurname" class="control-label">Last Name</label>-->
+                      <input type="text" class="form-control" id="inputSurname" data-error="What your Last Name?" placeholder="Last Name" required name="surname">
+                      <div class="help-block with-errors"></div>
                     </div>
                  
                  </div>
                </div>
               
               
-              
-               <div class="form-group">
-<!--                <label for="inputName" class="control-label">Company</label>-->
-                <select class="form-control bfh-countries" data-country="$('#country option[value='']').text('Select Country');" data-flags="true" required data-error="Select your Country">
+              <div class="row">
+                <div class="col-sm-3">
+                 
+                  <div class="form-group">
+                    <label for="inputCountry" class="control-label">Select Country</label>
+                    <select class="form-control bfh-countries" data-country="" data-flags="true" required data-error="Select your Country" id="inputCountry" name="country">
 <!--                  <option hidden value="">Select country</option>-->
-                </select>
-                <div class="help-block with-errors"></div>
-                
-<!--
-                 <select  class="form-control" id="" placeholder="Company (optional)" required>
-                   <option value="">Lietuva</option>
-                   <option value="">Latvija</option>
-                 </select>
--->
-              </div>
-              
-              
-              <div class="form-group has-feedback">
-                <label for="inputTwitter" class="control-label">Twitter</label>
-                <div class="input-group">
-                  <span class="input-group-addon">@</span>
-                  <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
-                </div>
-                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                <div class="help-block with-errors">Hey look, this one has feedback icons!</div>
-              </div>
-              
-              
-              <div class="form-group">
-                <label for="inputEmail" class="control-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
-                <div class="help-block with-errors"></div>
-              </div>
-              
-              <div class="form-group">
-                <label for="inputPassword" class="control-label">Password</label>
-                <div class="form-inline row">
-                  <div class="form-group col-sm-6">
-                    <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
-                    <div class="help-block">Minimum of 6 characters</div>
-                  </div>
-                  <div class="form-group col-sm-6">
-                    <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                    </select>
                     <div class="help-block with-errors"></div>
                   </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="underwear" required>
-                    Boxers
-                  </label>
+                <div class="col-sm-3">
+                  
+                  <div class="form-group">
+<!--                    <label for="inputState" class="control-label">State</label>-->
+                    <input type="text" class="form-control form-margin-top" id="inputState" placeholder="State (optional)" name="state">
+                  </div>
                 </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="underwear" required>
-                    Briefs
-                  </label>
+                
+                <div class="col-sm-3">
+                  <div class="form-group">
+<!--                    <label for="inputZip" class="control-label">ZIP / Postal</label>-->
+                    <input type="text" class="form-control form-margin-top" id="inputZip" placeholder="ZIP / Postal" required data-error="Fill in ZIP or Postal code" name="zip">
+                    <div class="help-block with-errors"></div>
+                  </div>
                 </div>
+                
+                <div class="col-sm-3">
+                  <div class="form-group">
+<!--                    <label for="inputCity" class="control-label">Your City</label>-->
+                    <input type="text" class="form-control form-margin-top" id="inputCity" placeholder="City" required data-error="What your City?" name="city">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                
               </div>
-              <div class="form-group">
+              
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+<!--                    <label for="inputAddress" class="control-label">Address</label>-->
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Address" required data-error="Don't forgret your adress" name="address">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+<!--                    <label for="inputComment" class="control-label">Address</label>-->
+                    <textarea class="form-control" id="inputComment" placeholder="Comment / Question (optional)" cols="10" rows="5" name="comment"></textarea>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="form-group" align="center">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
-                    Check yourself
+                    <input type="checkbox" id="terms" data-error="Check Terms and Conditions" required>
+                    I read and accept the <a href="" alt="">Terms & Conditions</a>
                   </label>
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                  
+              <div class="form-group" align="center">
+                <button type="submit" class="btn btn-outline btn-lg" name="order-request">order request</button>
               </div>
             </form>
             
            
+       </div>
      </div>
         
     </section> 
