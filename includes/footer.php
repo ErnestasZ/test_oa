@@ -78,6 +78,12 @@
     <script src="contact_form/form_js.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
     
+<!--    1000 bootsrap validator-->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+   
+   <!-- Bootstrap form helper -->
+   <script src="bootstrap_form_helper/dist/js/bootstrap-formhelpers.min.js"></script>
+    
     
     <script>
       var myIndex = 0;
@@ -96,6 +102,10 @@
       }
       
       carousel();
+      </script>
+      
+      <script>
+        $('#country option[value='']').text('Select Country');
       </script>
 
 <!--

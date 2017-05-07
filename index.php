@@ -1,3 +1,8 @@
+
+<?php include "classes.php" ?>
+
+<?php session_start(); ?>
+
 <?php include "includes/header.php";?>
 
 <?php include "includes/navbar.php";?>  
@@ -44,7 +49,7 @@
                     <div class="col-sm-10 col-sm-offset-1">
                         <div class="oasis-header">
                             <div class="header-content-inner">
-                                <h1>Unique spot of sences</h1>
+                                <h1>Unique spot of senses</h1>
                                 <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
 
                             </div>
@@ -93,12 +98,16 @@
         <div class="container">
            
          <?php 
+//            session_start();
 //            global $_SESSION['cart'];
-            if(count($_SESSION['cart']) == 0){
-              echo "Tuscias";
-            } else {
-              echo "Prekiu krepselyje yra";
-            }
+//          print_r($_SESSION['cart']);
+//            if(count($_SESSION['cart']) == 0){
+//              echo "Tuscias";
+//            } else {
+//              echo "Prekiu krepselyje yra";
+//            }
+          
+          
           
           ?>
             <div class="row">

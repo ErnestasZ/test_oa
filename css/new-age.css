@@ -391,7 +391,7 @@ footer ul li a.active {
 
 .btn-outline {
   color: white;
-  border-top-color: transparent;
+  border-top-color: transparent ;
   border-bottom-color: transparent;
   border: 1px solid;
   background-color: #ff6600 !important;  /*pasalinus permatoma*/

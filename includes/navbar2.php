@@ -19,6 +19,23 @@
                     <li>
                         <a href="index.php"><i class="icon-arrow-left-circle icon-nav"></i> Oasis Home</a>
                     </li>
+                    <?php 
+                      if(isset($_SESSION['cart']) && count($_SESSION['cart']) != 0){
+                        ?>
+                      
+                    <li>
+                        <a class="page-scroll" href="shopping_cart_new.php">Shopping cart <div id="count-cart"><?php 
+                          $cart = unserialize(serialize($_SESSION['cart']));
+                            $qty = 0;
+                            for($i = 0; $i < count($cart); $i++){
+                              $qty += $cart[$i]->quantity;
+                            }
+                            echo $qty;
+                          
+                          
+                          ?></div></a>
+                    </li>
+                    <?php } ?>
                 </ul>
                 </div>
             </div>
