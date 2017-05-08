@@ -1,13 +1,11 @@
-<?php include "classes.php" ?>
-
 <?php session_start(); ?>
-
+<?php include "classes.php" ?>
 <?php include "includes/header.php";?>
 
 <?php
 
 if(isset($_POST['order-request'])){
-  $to = $_POST['email'] . ", ernestas@stamperija.eu";
+  $to = $_POST['email'] . ", ernestas.zemaitis@gmail.com";
   $subject = "OASIS dome";
   $message = "
     <html>
@@ -36,7 +34,7 @@ if(isset($_POST['order-request'])){
   $headers .= 'From: <order@oasisdome.eu>' . "\r\n";
 //  $headers .= 'Cc: myboss@example.com' . "\r\n";
 //  
-////  mail($to,$subjet,$message,$headers);
+  mail($to,$subjet,$message,$headers);
 //  
 
 ?>

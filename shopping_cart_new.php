@@ -1,9 +1,10 @@
+<?php session_start(); ?>
 <?php include "includes/header.php";?>
 <?php include "includes/navbar3.php";?>
 <?php include "classes.php";?>
 
 
-<?php session_start();
+<?php 
 
   
   

@@ -1,7 +1,6 @@
-
+<?php session_start(); ?>
 <?php include "classes.php" ?>
 
-<?php session_start(); ?>
 
 <?php include "includes/header.php";?>
 
