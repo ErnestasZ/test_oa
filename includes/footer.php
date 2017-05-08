@@ -104,9 +104,11 @@
       carousel();
       </script>
       
+<!--
       <script>
         $('#country option[value='']').text('Select Country');
       </script>
+-->
 
 <!--
   <script type="text/javascript">

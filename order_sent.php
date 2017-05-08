@@ -35,11 +35,9 @@ if(isset($_POST['order-request'])){
   
   $headers .= 'From: <order@oasisdome.eu>' . "\r\n";
 //  $headers .= 'Cc: myboss@example.com' . "\r\n";
-  
-  mail($to,$subjet,$message,$headers);
-  
-
-
+//  
+////  mail($to,$subjet,$message,$headers);
+//  
 
 ?>
 
