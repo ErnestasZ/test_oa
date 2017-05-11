@@ -6,8 +6,8 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                  <div class="nav-logo">
-<!--                    <img src="images/oasis-logo2.png" class="logo" alt="OASIS dome">-->
+                  <div class="nav2-logo">
+<!--                    <img src="../images/logo/OASIS-LOGO-juodas.png" class="logo" alt="OASIS dome">-->
                   </div>
                 </a>
             </div>

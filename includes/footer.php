@@ -23,18 +23,15 @@
              <div class="col-sm-8 highlights-footer">
              
                <div class="col-sm-4">
-                <h5>ORDERS</h5>
+                <h5>ORDER INQUIRIES</h5>
+                 <p><a href="mailto:order@oasisdome.eu?Subject=Oasis%20Dome" target="_top">order@oasisdome.eu</a></p>
                  <p>Lina Svarauskaite</p>
-                 <p><a href="mailto:order@oasisdome.eu?Subject=Oasis%20Dome" target="_top">order@oasisdome.eu</a></p>
                  <p>00 370 693 72920</p>
-                 
-               </div>
-                <div class="col-sm-4">
-                  <h5>ORDERS</h5>
                  <p>Aiste Puzeriene</p>
-                 <p><a href="mailto:order@oasisdome.eu?Subject=Oasis%20Dome" target="_top">order@oasisdome.eu</a></p>
                  <p>00 370 685 05240</p>
                </div>
+               
+
                <div class="col-sm-4">
                  <h5>Co-FOUNDER</h5>
                  <p>Vytautas Puzeras</p>
@@ -47,7 +44,7 @@
               <div class="footer-adress">
                <h5>Company: Puzero, UAB</h5>
                <p>Code: 303447415</p>
-               <p>Adress: Elniu str. 27-62, Vilnius, 08101</p>
+               <p>Address: Elniu str. 27-62, Vilnius, 08101</p>
                <p>IBAN: LT17 7044 0600 0799 2398</p>
                <p>Bank: SEB 70440</p>
              </div>
@@ -83,6 +80,25 @@
    
    <!-- Bootstrap form helper -->
    <script src="bootstrap_form_helper/dist/js/bootstrap-formhelpers.min.js"></script>
+   
+   <!-- Flex slider -->
+   <script src="jquery.flexslider.js"></script>
+   
+   
+    <script>
+      $(window).load(function() {
+        $('.flexslider').flexslider({
+          animation: "fade",
+          animationSpeed: 600,
+          slideshowSpeed: 5000,
+//          controlsContainer: $(".custom-controls-container"),
+          directionNav: false,
+          controlNav: false,
+          itemWidth: 220
+          
+        });
+      });
+    </script>
     
     
     <script>

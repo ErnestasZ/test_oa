@@ -139,7 +139,7 @@ p {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #fdcc52;
+    color: #fdcbtc52;
   }
 }
 
@@ -391,18 +391,20 @@ footer ul li a.active {
 
 .btn-outline {
   color: white;
-  border-top-color: transparent ;
-  border-bottom-color: transparent;
-  border: 1px solid;
-  background-color: #ff6600 !important;  /*pasalinus permatoma*/
+/*  border-top-color: transparent ;*/
+  border-color: transparent;
+  border: 1px transparent;
+  background-color: #ff6600;  
 }
+
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background-color: #d55602;
-  border-color: #d55602;
+/*  border: 1px solid;*/
+  background-color: #DF4600;
+  border-color: #DF4600;
 }
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';

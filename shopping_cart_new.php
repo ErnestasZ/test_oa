@@ -82,10 +82,7 @@ if(isset($_POST['update'])){
   $_SESSION['cart'] = $cart;
 }
 
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
+
 //_____________Oreder request______________
 if(isset($_POST['order-request'])){
   print_r($_POST['order-request']);
@@ -104,9 +101,9 @@ if(isset($_POST['order-request'])){
           <div class="container">
            <div class="jumbotron cart-jumbotron">
              
-              <h1>Prekiu krepselis tuscias</h1>
-                <p>Parasyti kazkoki teksta del tuscio prekiu krepselio</p>
-                <p><a class="btn btn-outline " href="index.php" role="button">Back to OASIS</a></p>
+              <h1>Your cart is empty</h1>
+                <p>You can view the products in Oasis home page</p>
+                <p><a class="btn btn-outline btn-xl" href="index.php" role="button">Back to OASIS</a></p>
             </div>
           </div>
  <?php
@@ -211,7 +208,7 @@ if(isset($_POST['order-request'])){
          
          <div class="col-xs-12" align="center">
            <h2 class="cart-total">Total <?php echo $total . " EUR"; ?>*</h2>
-           <p>*Total price without shipping, please ... bla bla bla ... reikia teksto</p>
+           <p>*Taxes and shipping fee is not included.</p>
          </div>
 
        </div>
@@ -236,7 +233,7 @@ if(isset($_POST['order-request'])){
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                  <h1 class="oasis-cont content-features">Fill in your shipping address</h1>
+                  <h1 class="oasis-cont content-features">Customer information</h1>
                 </div>
             </div>
      </div>
@@ -346,14 +343,14 @@ if(isset($_POST['order-request'])){
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" id="terms" data-error="Check Terms and Conditions" required>
-                    I read and accept the <a href="" alt="">Terms & Conditions</a>
+                    I read and accept the <a href="" alt="" data-toggle="modal" data-target="#myModal">Terms & Conditions</a>
                   </label>
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
                   
               <div class="form-group" align="center">
-                <button type="submit" class="btn btn-outline btn-lg" name="order-request">order request</button>
+                <button type="submit" class="btn btn-outline btn-xl" name="order-request">order request</button>
               </div>
             </form>
             
@@ -362,6 +359,31 @@ if(isset($_POST['order-request'])){
      </div>
         
     </section> 
+    
+    <?php include "includes/footer.php"; ?>   
+    
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Terms & Condition</h4>
+            </div>
+            <div class="modal-body">
+Thundercats before they sold out fap marfa forage art party. Schlitz coloring book succulents migas shoreditch. Messenger bag tbh umami, knausgaard fashion axe drinking vinegar waistcoat meggings 8-bit post-ironic keytar. Hell of marfa pinterest, hot chicken crucifix photo booth pour-over yuccie keffiyeh pabst whatever. Kinfolk asymmetrical food truck, normcore you probably haven't heard of them vice raw denim ugh organic kickstarter hella mlkshk taxidermy. Kale chips cliche readymade forage bespoke. Scenester organic polaroid disrupt marfa gentrify, echo park freegan tote bag mumblecore tbh squid.
+
+Small batch knausgaard raclette PBR&B. Wolf sustainable bespoke, af celiac artisan direct trade pitchfork man bun tumeric poutine green juice. Venmo williamsburg bicycle rights, farm-to-table selfies occupy gentrify kogi. Before they sold out church-key tumeric, thundercats gochujang fixie artisan VHS farm-to-table snackwave flexitarian four dollar toast. Literally blog bushwick shabby chic. Cronut single-origin coffee you probably haven't heard of them locavore authentic, offal ramps portland yuccie waistcoat cold-pressed plaid. Godard la croix tattooed post-ironic, polaroid edison bulb semiotics art party mlkshk gastropub echo park air plant 3 wolf moon.
+
+Beard sustainable fixie drinking vinegar. Selvage semiotics kitsch meh small batch literally, thundercats bicycle rights woke. Next level +1 everyday carry woke, prism coloring book chia PBR&B pok pok gochujang locavore mustache green juice direct trade meh. Yuccie helvetica literally humblebrag semiotics paleo. Blog banjo street art, hexagon hella man braid edison bulb chia selvage DIY truffaut. Tote bag distillery tousled, hell of twee put a bird on it PBR&B air plant iceland pok pok vexillologist actually. Squid listicle forage selvage mlkshk.
+
+Live-edge artisan occupy letterpress. Forage sriracha selfies, knausgaard portland craft beer chambray squid meggings stumptown echo park polaroid photo booth. Disrupt neutra gochujang lumbersexual banjo kickstarter. Air plant skateboard neutra, lomo paleo woke master cleanse everyday carry. Ethical everyday carry brooklyn microdosing. XOXO hashtag chartreuse cornhole. Distillery mumblecore dreamcatcher, keffiyeh +1 yuccie activated charcoal.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              
+          </div>
+        </div>
+      </div>
   
   
   
@@ -384,7 +406,7 @@ if(isset($_POST['order-request'])){
     
     
     
-<?php include "includes/footer.php"; ?>    
+  
     
     
     

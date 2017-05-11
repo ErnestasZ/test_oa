@@ -6,7 +6,10 @@
 
 <?php include "includes/navbar.php";?>  
  
-  
+<?php
+
+
+?>
   <header class=header-oasis>
    
     <div class="header-oasis1 mySlides">
@@ -16,7 +19,7 @@
                     <div class="oasis-header">
                         <div class="header-content-inner">
                             <h1>Unique spot of senses</h1>
-                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
+                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surroundings.<br> Feel the moment and enjoy nature!</p>
                             
                         </div>
                     </div>
@@ -49,7 +52,7 @@
                         <div class="oasis-header">
                             <div class="header-content-inner">
                                 <h1>Unique spot of senses</h1>
-                                <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
+                                <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surroundings.<br> Feel the moment and enjoy nature!</p>
 
                             </div>
                         </div>
@@ -152,29 +155,6 @@
      
     </section>
     
-<!-- FEATURES DROP
-    <section id="features" class=" text-center content-oasis content-high">
-      <div class=" ">
-        <div class="panel-heading highlights highlights-content" role="tab" id="headingOne">
-          <h1 class="oasis-cont">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              FEATURES
-            </a>
-          </h1>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
-           <div class="row">
-             <div class="col-sm-6 col-sm-offset-3">
-               <img src="images/ORAI_VEJAS_SAULE.gif" class="img-responsive" alt="">
-             </div>
-           </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
--->
     
     <section id="features" class=" text-center content-oasis">
         <div class="container">
@@ -260,7 +240,7 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="thumbnail  request">
-                      <img src="images/OASIS2-SENDREQUEST.jpg" alt="" >
+                      <img src="images/OASIS2-SENDREQUEST.png" alt="" >
                       <div class="caption">
                         <h1 class="oasis-cont">OASIS 2</h1>
                         <p>CAPACITY 2 PERSONS</p>
@@ -271,7 +251,7 @@
                 </div>
                 <div class="col-xs-6">
                     <div class="thumbnail  request">
-                      <img src="images/OASIS4-SENDREQUEST.jpg" alt="" >
+                      <img src="images/OASIS4-SENDREQUEST.png" alt="" >
                       <div class="caption">
                         <h1 class="oasis-cont">OASIS 4</h1>
                         <p>CAPACITY 4 PERSONS</p>
@@ -332,13 +312,19 @@
                 </div>
             </div>
             
-            <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
+           <div class="row">
+              <div class="col-md-6">
                <div class="thumbnail color-pick">
-                <img src="images/Saule-vejas.gif" alt="">
+                <img src="images/GIF/Saule_vejas.gif" alt="" class="ventilation">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="weather">
+                  <p>Use your Oasis in different weather conditions. To feel the most comfortable while staying inside we recommend use it in between the temperatures from +15C till +25C.</p>
                 </div>
               </div>
             </div>
+            
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
                <div class="thumbnail color-pick">
@@ -362,7 +348,7 @@
             <div class="row">
               <div class="col-md-6">
                <div class="thumbnail color-pick">
-                <img src="images/OASIS-4-DURYS-SP.gif" alt="">
+                <img src="images/GIF/GRINDYS.gif" alt="">
                 </div>
               </div>
               <div class="col-md-6">
@@ -379,7 +365,7 @@
         </div>
     </section> 
     
-    <section class="text-center content-oasis">
+    <section class="text-center content-oasis sec-ventilation">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
@@ -391,10 +377,10 @@
             <div class="row">
               <div class="col-md-6">
                <div class="thumbnail color-pick">
-                <img src="images/VEDINIMAS.gif" alt="" class="ventilation">
+                <img src="images/GIF/VEDINIMAS.gif" alt="" class="ventilation" >
                 </div>
               </div>
-              <div class="col-md-6 vcenter">
+              <div class="col-md-6">
                <div class="out">
                 <div class="inner">
                   <p>OASIS 2 there are 5 air vents installed in the walls and main open/close output in the roof + doors <br>
@@ -414,7 +400,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <h1 class="oasis-cont content-features">Press</h1>
+                  <h1 class="oasis-cont content-features press-gallery">Press</h1>
                     
                 </div>
             </div>
@@ -516,7 +502,7 @@
    <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <h1 class="oasis-cont content-features">Gallery</h1>
+                  <h1 class="oasis-cont content-features press-gallery">Gallery</h1>
                     
                 </div>
              </div>
@@ -543,67 +529,67 @@
     <div class="item active">
       <img src="images/Galery/OASISGALLERY1.jpg" alt="...">
       <div class="carousel-caption">
-        OASIS
+        Feel infinity with Oasis dome
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY10.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Star watching
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY11.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Privacy and comfort inside Oasis
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY12.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Durable materials and features completed
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY2.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Marine plywood and portable arches construction
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY3.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Oasis is perfect for a honeymoon escape
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY4.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Leading living space according to activities outdoors
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY5.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Oasis dome construction is perfectly resistant for strong winds and seaside weather
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY6.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Beautiful place to Relax and regenerate your energy
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY8.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Your personal floating heaven
       </div>
     </div>
     <div class="item">
       <img src="images/Galery/OASISGALLERY9.jpg" alt="...">
       <div class="carousel-caption">
-        ...
+        Extraordinary stay in a wonderful place
       </div>
     </div>
   </div>
@@ -627,10 +613,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <h1 class="oasis-cont ">Guarantee</h1>
+                  <h1 class="oasis-cont ">Warranty</h1>
                    <p>
-                     2 years construction. <br>
-                     Life time client support.
+                     2 years guarantee for constructions. <br>
+                     Lifetime client support.
                    </p>
                     
                 </div>
@@ -661,14 +647,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <h1 class="oasis-cont content-features">Have a question?</h1>
-                  <p>Get in touch! We'd love to hear from you.</p>
+                  <h1 class="oasis-cont content-features">How can we help you?</h1>
+                  <p>Leave an inquiry below, we will get in touch with you</p>
                 </div>
             </div>
             <div class="row">
                 <div class="container">
                 <div class="col-sm-6 col-sm-offset-3">
-                   <form class="form-horizontal" action=" " method="post"  id="contact_form">
+                   <form class="form-horizontal" action="order_sent.php" method="post"  id="contact_form" role="form">
                 <fieldset>
 
                 <!-- Form Name -->
@@ -706,118 +692,6 @@
 
 <!-- Text input-->
        
-<!--
-<div class="form-group">
-  <label class="col-md-4 control-label">Phone #</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
-    </div>
-  </div>
-</div>
--->
-
-<!-- Text input-->
-      
-
-
-<!-- Text input-->
- 
-
-
-<!-- Select Basic -->
-   
-<!--
-<div class="form-group"> 
-  <label class="col-md-4 control-label">State</label>
-    <div class="col-md-4 selectContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="state" class="form-control selectpicker" >
-      <option value=" " >Please select your state</option>
-      <option>Alabama</option>
-      <option>Alaska</option>
-      <option >Arizona</option>
-      <option >Arkansas</option>
-      <option >California</option>
-      <option >Colorado</option>
-      <option >Connecticut</option>
-      <option >Delaware</option>
-      <option >District of Columbia</option>
-      <option> Florida</option>
-      <option >Georgia</option>
-      <option >Hawaii</option>
-      <option >daho</option>
-      <option >Illinois</option>
-      <option >Indiana</option>
-      <option >Iowa</option>
-      <option> Kansas</option>
-      <option >Kentucky</option>
-      <option >Louisiana</option>
-      <option>Maine</option>
-      <option >Maryland</option>
-      <option> Mass</option>
-      <option >Michigan</option>
-      <option >Minnesota</option>
-      <option>Mississippi</option>
-      <option>Missouri</option>
-      <option>Montana</option>
-      <option>Nebraska</option>
-      <option>Nevada</option>
-      <option>New Hampshire</option>
-      <option>New Jersey</option>
-      <option>New Mexico</option>
-      <option>New York</option>
-      <option>North Carolina</option>
-      <option>North Dakota</option>
-      <option>Ohio</option>
-      <option>Oklahoma</option>
-      <option>Oregon</option>
-      <option>Pennsylvania</option>
-      <option>Rhode Island</option>
-      <option>South Carolina</option>
-      <option>South Dakota</option>
-      <option>Tennessee</option>
-      <option>Texas</option>
-      <option> Uttah</option>
-      <option>Vermont</option>
-      <option>Virginia</option>
-      <option >Washington</option>
-      <option >West Virginia</option>
-      <option>Wisconsin</option>
-      <option >Wyoming</option>
-    </select>
-  </div>
-</div>
-</div>
--->
-
-<!-- Text input-->
-
-
-
-<!-- Text input-->
-
-
-<!-- radio checks -->
-<!--
-   <div class="form-group">
-          <label class="col-md-4 control-label">Do you have hosting?</label>
-          <div class="col-md-4">
-              <div class="radio">
-                  <label>
-                      <input type="radio" name="hosting" value="yes" /> Yes
-                  </label>
-              </div>
-              <div class="radio">
-                  <label>
-                      <input type="radio" name="hosting" value="no" /> No
-                  </label>
-              </div>
-          </div>
-      </div>
--->
 
                     <!-- Text area -->
 
@@ -836,7 +710,7 @@
                     <div class="form-group">
                       <label class="col-md-4 control-label"></label>
                       <div class="col-md-4">
-                        <button type="submit" class="btn btn-outline btn-xl" >Send </button>
+                        <input type="submit"  class="btn btn-outline btn-xl" value="Send">
                       </div>
                     </div>
 

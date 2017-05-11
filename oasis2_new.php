@@ -33,6 +33,7 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <h1 class="oasis-cont count-oasisII content-features">OASIS 2</h1>
+                    <p>Portable living space for your individual needs</p>
                 </div>
             </div>
             
@@ -293,9 +294,9 @@
     <div class="col-sm-6">
      
        
-       <h1 class="oasis-cont">Guarantee</h1>
-      <p>2 years construction. <br>
-      Life time client support.</p>
+       <h1 class="oasis-cont">Warranty</h1>
+      <p>2 years guarantee for constructions. <br>
+      Lifetime client support.</p>
       
       
       

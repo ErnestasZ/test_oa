@@ -33,6 +33,7 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <h1 class="oasis-cont count-oasisII content-features">OASIS 4</h1>
+                    <p>Portable individual living space</p>
                 </div>
             </div>
             
@@ -155,7 +156,7 @@
                   
                   <div class="checkbox">
                     <label>
-                           <input id="oasis4" type="hidden" name="oasis4" value="4200" class="input-adds">
+                           <input id="oasis4" type="hidden" name="oasis4" value="4400" class="input-adds">
                     </label>
                   </div>
                   
@@ -283,7 +284,7 @@
     </div>
     <div class="col-sm-6">
       <h1 class="oasis-cont">OASIS 4 package</h1>
-      <p>2.6m x 0.8m, h=0.55m / 102in x 27in, h=21.6in 340Kg / 749lbs</p>
+      <p>2.7m x 0.84m, h=0.72m / 106.2in x 33in, h=28.3in  390Kg / 859lbs</p>
        <div class="thumbnail color-pick thumb-color">
         <img src="images/OASIS-4-package.png" alt="">
       </div>
