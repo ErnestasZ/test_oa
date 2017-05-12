@@ -26,11 +26,14 @@ if(isset($_POST['send'])){
   
   
   
-  
- }
+}
+
+$email = "ernestas@kazkas.com 3454567], / echo <br> ";
+$next = wordwrap($email);
+echo $next;
 
 ?>
-  
+
 <header>
  
   <div class="text-header">
@@ -68,11 +71,71 @@ if(isset($_POST['send'])){
     
    <div class="flexslider oasis-slider">
     <ul class="slides">
-      <li>
-        <img src="images/OASIS-INTRO1___.jpg" />
+      <li class="header-oasis1">
+         <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="oasis-header">
+                        <div class="header-content-inner">
+                            <h1>Unique spot of senses</h1>
+                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-movie" align="center">
+             
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-3 highlights">
+                  <a href="https://vimeo.com/202928576" target="_blank"><p>Movie highlights <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+                <div class="col-sm-3 highlights">
+                  <a href="https://vimeo.com/184565990" target="_blank"><p>Oasis movie <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+              </div>
+           
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <a href="#order" class="btn btn-outline btn-xl page-scroll btn-header">ORDER</a>
+                </div>
+              </div>
+            </div>
+        </div>
+<!--        <img src="images/OASIS-INTRO1___.jpg" />-->
       </li>
-      <li>
-        <img src="images/OASIS-INTRO2___.jpg" />
+      <li class="header-oasis2">
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="oasis-header">
+                        <div class="header-content-inner">
+                            <h1>Unique spot of senses</h1>
+                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-movie" align="center">
+             
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-3 highlights">
+                  <a href="https://vimeo.com/202928576" target="_blank"><p>Movie highlights <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+                <div class="col-sm-3 highlights">
+                  <a href="https://vimeo.com/184565990" target="_blank"><p>Oasis movie <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+              </div>
+           
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <a href="#order" class="btn btn-outline btn-xl page-scroll btn-header">ORDER</a>
+                </div>
+              </div>
+            </div>
+        </div>
+<!--        <img src="images/OASIS-INTRO2___.jpg" />-->
       </li>
     </ul>
   </div>  
@@ -81,7 +144,7 @@ if(isset($_POST['send'])){
         
 </header>
 
-    <section class=" text-center content-oasis">
+    <section class=" text-center content-oasis content-oasis-first">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
@@ -725,7 +788,7 @@ if(isset($_POST['send'])){
                     <div class="form-group">
                       <label class="col-md-4 control-label"></label>
                       <div class="col-md-4">
-                        <button type="submit" class="btn btn-outline btn-xl" >Send </button>
+                        <button type="submit" class="btn btn-outline btn-xl"  name="submit">Send </button>
                       </div>
                     </div>
 
@@ -743,7 +806,7 @@ if(isset($_POST['send'])){
     
     
          <div class="container">
-            <form action="" class="" data-toggle="validator" role="form" method="post">
+            <form action="index_new.php?param1=bele" class="" data-toggle="validator" role="form" method="post">
                
                <h3>Customer information</h3>
                 
@@ -791,8 +854,23 @@ if(isset($_POST['send'])){
        
        
 
-    
-
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Terms & Condition</h4>
+            </div>
+            <div class="modal-body">
+issiustas
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              
+          </div>
+        </div>
+      </div>   
+</div>
     
   
     
@@ -801,11 +879,3 @@ if(isset($_POST['send'])){
 <?php include "includes/footer.php";?>  
 
 
-<script>
-            $('#form').submit(function(e) {
-                $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
-                $('#messages_content').html('<h4>MESSAGE HERE</h4>');
-                $('#modal').modal('show');
-                e.preventDefault();
-            });
-        </script>

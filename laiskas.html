@@ -1,4 +1,13 @@
-<html>
+
+   $price = 0;
+
+   $total = 0;
+   
+   $cart = $_SESSION['cart'];
+    for($i; $i < count($cart); $i++){
+   
+   
+   "<html>
     <head>
     <title>HTML email</title>
     </head>
@@ -29,6 +38,9 @@
       
     </table>
     
+    
+    
+    
     <br>
     
     <table  width="600" cellspacing="0">
@@ -39,19 +51,335 @@
     <th >Price</th>
     </tr>
     <tr>
-    <td>" . $cart->name . "</td>
-    <td>" .Vienas, kitas, tecias</td>
-    <td align="center">1</td>
-    <td align="right">4000 EUR</td>
+    <td>" . $cart[$i]->name . "</td>
+    
+    <?php $price += $cart[$i]->price;
+    foreach($cart[$i]->adds as $add){ ?>
+    <td>" . $add->name . "</td>
+      
+   <?php $price += $add->price;
+    } ?>
+    <td align="center">" . $cart[$i]->quantity . "</td>
+    <td align="right">". ($price * $cart[$i]->quantity) . " EUR</td>
     </tr>
+    
+    <?php $total += ($price * $cart[$i]->quantity);
+    } ?>
     <tr>
+    
     <td></td>
     <td></td>
-    <td align="right">Total:</td>
-    <td align="right">4000 EUR</td>
+    <td align="right">Total</td>
+    <td align="right">" . $total . "</td>
     </tr>
     </table>
     
     </div>
     </body>
-</html>
+</html>"
+
+
+$message = "<html> 
+    <?php 
+
+    for($i; $i < count($cart); $i++){ 
+    ?>
+    
+    <head>
+    <title>HTML email</title>
+    </head>
+    <body>
+    <h3>ORDER REQUEST</h3>
+    <div width='600', >
+    <table  width='600' cellspacing='0'>
+      <tr>
+        <td width='350' style='background-color: #726764; color: white;'>Oasis: </td>
+        <td align='right'></td>
+      </tr>
+       <tr>
+        <td width='250'>Public Enterprise UPES KORYS<br>Legal pers. no.: 302507368<br>VAT: 100006458215<br>Address: Elniu str. 27-62 / Stirnu str. 28-62, Vilnius<br>Account: LT55 7044 0600 0752 5338<br>Bank: SEB 70440<br>Co-founder Vytautas Puzeras
+        <p></p>
+        </td>
+        <td align='right'></td>
+      </tr>
+      
+      <tr>
+        <td width='350' style='background-color: #726764; color: white;'>To: </td>
+        <td align='right'></td>
+      </tr>
+       <tr>
+        <td width='250'>Name: <?php echo $_POST['name']; ?> <br>Last name: <?php echo $_POST['surname']; ?><br>Email: <?php echo $_POST['email']; ?><br>Address: <?php echo $_POST['country']; ?><br><?php echo $_POST['zip']; ?><br><?php echo $_POST['city']; ?><br><?php echo $_POST['address']; ?><br>Comment: <?php echo $_POST['comment']; ?>
+        <td align='right'></td>
+      </tr>
+     
+      
+    </table>
+    
+    
+    
+    
+    <br>
+    
+    <table  width='600' cellspacing='0'>
+    <tr style='background-color: #726764; color: white;'>
+    <th align='left'>Name</th>
+    <th align='left'>Adds</th>
+    <th>Quantity</th>
+    <th >Price</th>
+    </tr>
+    <tr>
+    <td><?php echo $cart[$i]->name; ?></td>
+    
+    <?php $price += $cart[$i]->price;
+    foreach($cart[$i]->adds as $add){ ?>
+    <td><?php echo $add->name; ?></td>
+      
+   <?php $price += $add->price;
+    } ?>
+    <td align='center'><?php echo $cart[$i]->quantity; ?></td>
+    <td align='right'><?php echo ($price * $cart[$i]->quantity); ?> EUR</td>
+    </tr>
+    
+    <?php $total += ($price * $cart[$i]->quantity); ?>
+    <?php } ?>
+    <tr>
+    
+    <td></td>
+    <td></td>
+    <td align='right'>Total</td>
+    <td align='right'><?php echo $total; ?></td>
+    </tr>
+    </table>
+    
+    </div>
+    </body>
+</html>";
+
+
+
+
+
+
+
+
+
+  $message = "
+  
+  <html><head>
+    <title>HTML email</title>
+    </head>
+    <body>
+    <h3>ORDER REQUEST</h3>
+    <div width='600', >
+    <table  width='600' cellspacing='0'>
+      <tr>
+        <td width='350' style='background-color: #726764; color: white;'>Oasis: </td>
+        <td align='right'></td>
+      </tr>
+       <tr>
+        <td width='250'>Public Enterprise UPES KORYS<br>Legal pers. no.: 302507368<br>VAT: 100006458215<br>Address: Elniu str. 27-62 / Stirnu str. 28-62, Vilnius<br>Account: LT55 7044 0600 0752 5338<br>Bank: SEB 70440<br>Co-founder Vytautas Puzeras
+        <p></p>
+        </td>
+        <td align='right'></td>
+      </tr>
+      
+      <tr>
+        <td width='350' style='background-color: #726764; color: white;'>To: </td>
+        <td align='right'></td>
+      </tr>
+       <tr>
+        <td width='250'>Name:" . $_POST['name'] . "<br>Last name: " . $_POST['surname'] . "<br>Email: " . $_POST['email'] ."<br>Address: " . $_POST['country'] . "<br>" . $_POST['zip'] . "<br>" . $_POST['city'] . "<br>" . $_POST['address'] . "<br>Comment: " . $_POST['comment'] . "
+        <td align='right'></td>
+      </tr>
+     
+      
+    </table>";
+
+
+
+
+
+
+
+
+<?php 
+
+    for($i; $i < count($cart); $i++){ 
+    ?>
+    
+    <head>
+    <title>HTML email</title>
+    </head>
+    <body>
+    <h3>ORDER REQUEST</h3>
+    <div width='600', >
+    <table  width='600' cellspacing='0'>
+      <tr>
+        <td width='350' style='background-color: #726764; color: white;'>Oasis: </td>
+        <td align='right'></td>
+      </tr>
+       <tr>
+        <td width='250'>Public Enterprise UPES KORYS<br>Legal pers. no.: 302507368<br>VAT: 100006458215<br>Address: Elniu str. 27-62 / Stirnu str. 28-62, Vilnius<br>Account: LT55 7044 0600 0752 5338<br>Bank: SEB 70440<br>Co-founder Vytautas Puzeras
+        <p></p>
+        </td>
+        <td align='right'></td>
+      </tr>
+      
+      <tr>
+        <td width='350' style='background-color: #726764; color: white;'>To: </td>
+        <td align='right'></td>
+      </tr>
+       <tr>
+        <td width='250'>Name: <?php echo $_POST['name']; ?> <br>Last name: <?php echo $_POST['surname']; ?><br>Email: <?php echo $_POST['email']; ?><br>Address: <?php echo $_POST['country']; ?><br><?php echo $_POST['zip']; ?><br><?php echo $_POST['city']; ?><br><?php echo $_POST['address']; ?><br>Comment: <?php echo $_POST['comment']; ?>
+        <td align='right'></td>
+      </tr>
+     
+      
+    </table>
+    
+    
+    
+    
+    <br>
+    
+    <table  width='600' cellspacing='0'>
+    <tr style='background-color: #726764; color: white;'>
+    <th align='left'>Name</th>
+    <th align='left'>Adds</th>
+    <th>Quantity</th>
+    <th >Price</th>
+    </tr>
+    <tr>
+    <td><?php echo $cart[$i]->name; ?></td>
+    
+    <?php $price += $cart[$i]->price;
+    foreach($cart[$i]->adds as $add){ ?>
+    <td><?php echo $add->name; ?></td>
+      
+   <?php $price += $add->price;
+    } ?>
+    <td align='center'><?php echo $cart[$i]->quantity; ?></td>
+    <td align='right'><?php echo ($price * $cart[$i]->quantity); ?> EUR</td>
+    </tr>
+    
+    <?php $total += ($price * $cart[$i]->quantity); ?>
+    <?php } ?>
+    <tr>
+    
+    <td></td>
+    <td></td>
+    <td align='right'>Total</td>
+    <td align='right'><?php echo $total; ?></td>
+    </tr>
+    </table>
+    
+    </div>
+    </body>
+</html> <?php" ; ?>
+
+
+$kintamas = "kitas" . $kjfksjdf;
+
+
+
+ 
+ 
+$message = "
+<html>
+<head>
+<title>Oasis Dome</title>
+</head>
+<body>
+<h3>OASIS DOME ORDER</h3>
+<table width='600'>
+<tr>
+<th width='300' style='background-color: #726764; color: white;' align='left'>Oasis: </th>
+<th></th>
+</tr>
+<tr>
+<td>Public Enterprise UPES KORYS<br>Legal pers. no.: 302507368<br>VAT: 100006458215<br>Address: Elniu str. 27-62 / Stirnu str. 28-62, Vilnius<br>Account: LT55 7044 0600 0752 5338<br>Bank: SEB 70440<br>Co-founder Vytautas Puzeras
+<p></p>
+</td>
+<td></td>
+</tr>";
+
+$message .= "
+<tr>
+  <td width='300' style='background-color: #726764; color: white;' align='left'><strong>To:</strong></td>
+  <td></td>
+</tr>";
+
+$message .= "
+<tr>
+  <td width='250'>Name: " . $_POST['name'] . "<br>Last name: " . $_POST['surname'] . "<br>Email: " . $_POST['email'] ."<br>Country: " . $_POST['country'] . "<br>Postal/ZIP: " . $_POST['zip'] . "<br>City: " . $_POST['city'] . "<br>Address: " . $_POST['address'] . "<br>";
+
+if(isset($_POST['phone'])){
+   $message .= "Phone: " . $_POST['phone'] . "<br>";
+ }
+  
+if(isset($_POST['comment'])){
+   $message .= "Comment: " . $_POST['comment'] . "<br>";
+ }
+
+$message .=  "<p></p>
+  </td>
+  <td></td>
+</tr>
+</table>";
+
+$message .= "
+<table width='600' cellspacing='0' style='border-collapse: collapse;'>
+  <tr style='background-color: #726764; color: white;'>
+    <th align='left'>Name</th>
+    <th align='left'>Adds</th>
+    <th>Qty</th>
+    <th align='center'>Price </th>
+  </tr>";
+
+
+  
+$price = 0;
+$total = 0;
+
+$cart = $_SESSION['cart'];
+ 
+for($i = 0; $i < count($cart); $i++){
+  $message .= "<tr style='border-bottom: 1px solid black'>";
+  $message .= "<td>" . $cart[$i]->name . " (" . $cart[$i]->price . " EUR)</td>";
+  
+  $price += $cart[$i]->price;
+  
+  $message .= "<td>";
+  foreach($cart[$i]->adds as $add){
+    $message .= "" . $add->name . " (" . $add->price . " EUR)</br>";
+    $price += $add->price;
+  }
+  $message .= "</td>";
+  $message .= "<td align='center'>" . $cart[$i]->quantity . "</td>";
+  $message .= "<td align='right'>" . $price . " EUR</td>";
+  
+ $message .= "</tr>";
+ $total += $price;
+ $price = 0;
+ }
+  
+  $message .= "<tr><td></td><td></td><td align='center'><h4>Total: </h4></td><td align='right'><h4>" . $total . " EUR</h4></td></tr>";
+$message .= "</table>";
+$message .= "<table width='600'>
+  <tr>
+    <td>Thank You for your order! We are happy that soon we can share amazing feelings which Oasis brings.
+    </td>
+  </tr>
+  <tr>
+    <td>Our team received Your request for Oasis dome. At the moment we are counting delivery price for the address given.
+    </td>
+  </tr>
+  <tr>
+    <td>We will contact you as soon as possible.
+    </td>
+  </tr>
+</table>";
+
+$message .= "<h4>Oasis team</h4>";
+$message .= "</body></html>";
+  

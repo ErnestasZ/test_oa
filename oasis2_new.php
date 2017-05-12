@@ -11,8 +11,9 @@
     <div class="header-oasisII-bg">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    
+                <div class="col-sm-12 oasis-order-logo" align="right">
+                   
+                      <img src="images/logo/oasis-logo2.png" alt="">
                       
                     
                 </div>
@@ -33,7 +34,7 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <h1 class="oasis-cont count-oasisII content-features">OASIS 2</h1>
-                    <p>Portable living space for your individual needs</p>
+                    <p>Designed for couple stay. Compact and roomy at the same time.</p>
                 </div>
             </div>
             
@@ -266,14 +267,14 @@
       <p>Oiled plywood floors, arches, construction parts, 
       bottom and upper canopy, doors and ventilation with anti-insect meshes, 
       mechanisms, bolts, angulars, cables, waterproof zippers, curtains. <br>
-      Assamly instruktion included to the set.</p>
+      Assembly instruction included to the set.</p>
     </div>
     <div class="col-sm-6 col">
      
      <h1 class="oasis-cont">Transportation</h1>
       <p>Worldwide. <br>
-      According to customer needs we provideregulr or fast delivery.<br>
-      Oasis packge fits into truck, trailer or bigger car.<br>
+      According to customer needs we provide regular or fast delivery.<br>
+      Oasis package fits into truck, trailer or bigger car.<br>
       All parts are packed in seperate cardboard boxes which comes in one box.</p>
       
      
@@ -307,9 +308,12 @@
      
      
       <h1 class="oasis-cont">Assembly duration</h1>
+      <p>Assembly takes approximately 4-8 hours, dismantling takes approximately 1-2 hours,  depending from skills.</p>
+<!--
       <div class="thumbnail color-pick thumb-color">
         <img src="images/ASSEMBLY-OASIS-2.png" alt="">
       </div>
+-->
       
       
       

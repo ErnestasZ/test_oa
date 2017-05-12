@@ -1,25 +1,8 @@
 @import "new-age.css";
 @import "flexslider.css";
 
-
-..nav-logo {
-  width: 75px;
-  height: 31px;
-  margin-top: -5px; 
-  position: absolute;
-/*  height: 100%;*/
-  background: url("../images/logo/oasis-logo2.png") no-repeat ;
-  background-size: cover;
-}
-
-..nav2-logo {
-  width: 76px;
-  height: 33px;
-  margin-top: -5px; 
-  position: absolute;
-/*  height: 100%;*/
-  background: url("../images/logo/OASIS-LOGO-juodas.png") no-repeat left bottom ;
-  background-size: cover;
+header{
+  margin-bottom: 0 !important;
 }
 
 img.logo{
@@ -62,7 +45,7 @@ header {
   right: 0;
 }
 
-div.header-oasis1 {
+li.header-oasis1 {
   position: relative;
   width: 100%;
   min-height: 700px;
@@ -76,7 +59,7 @@ div.header-oasis1 {
   color: white; 
 }
 
-div.header-oasis2 {
+li.header-oasis2 {
   position: relative;
   width: 100%;
   min-height: 700px;
@@ -201,6 +184,9 @@ header .oasis-header p {
   p {
     font-size: 12px;
   }
+  .header-movie {
+    margin-top: 300px;
+  }
   
 
 }
@@ -215,7 +201,9 @@ header .oasis-header p {
   .sec-ventilation {
     margin-bottom: 0 !important;
   }
+  
 }
+
 
 
 
@@ -232,6 +220,10 @@ section.content-oasis {
   color: black;
   
 }
+
+.content-oasis-first{
+    margin-top: -60px !important;
+  }
 
 .oasis-cont{
   color: #174a87;
@@ -334,11 +326,12 @@ section.home-send-request{
 }
 
 .recycle-icon {
-  height: 86px;
+  height: 84px;
 }
 
 .sertification-icon{
-  margin: 0 15px;
+  margin: 0;
+  height: 90px;
 }
 
 
@@ -380,6 +373,10 @@ img.ventilation {
   height: 40px;
 }
 /*OASIS 2 __________________________________________________________*/
+
+.oasis-order-logo{
+  margin-top: 470px;
+}
 
 @media (min-width: 768px) {
   .nav-bar-oasis2 {

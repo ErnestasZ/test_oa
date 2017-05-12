@@ -266,14 +266,14 @@ if(isset($_POST['order-request'])){
                  <div class="col-sm-6">
                     <div class="form-group">
 <!--                      <label for="inputName" class="control-label">Name</label>-->
-                      <input type="text" class="form-control" id="inputName" data-error="What your Name?" placeholder="Name" required name="name">
+                      <input type="text" class="form-control" id="inputName" data-error="What's your Name?" placeholder="Name" required name="name">
                       <div class="help-block with-errors"></div>
                     </div>
                  </div>
                  <div class="col-sm-6">
                     <div class="form-group">
 <!--                      <label for="inputSurname" class="control-label">Last Name</label>-->
-                      <input type="text" class="form-control" id="inputSurname" data-error="What your Last Name?" placeholder="Last Name" required name="surname">
+                      <input type="text" class="form-control" id="inputSurname" data-error="What's your Last Name?" placeholder="Last Name" required name="surname">
                       <div class="help-block with-errors"></div>
                     </div>
                  
@@ -311,7 +311,7 @@ if(isset($_POST['order-request'])){
                 <div class="col-sm-3">
                   <div class="form-group">
 <!--                    <label for="inputCity" class="control-label">Your City</label>-->
-                    <input type="text" class="form-control form-margin-top" id="inputCity" placeholder="City" required data-error="What your City?" name="city">
+                    <input type="text" class="form-control form-margin-top" id="inputCity" placeholder="City" required data-error="What's your City?" name="city">
                     <div class="help-block with-errors"></div>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ if(isset($_POST['order-request'])){
                 <div class="col-sm-12">
                   <div class="form-group">
 <!--                    <label for="inputAddress" class="control-label">Address</label>-->
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Address" required data-error="Don't forgret your adress" name="address">
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Address" required data-error="Don't forgret your address" name="address">
                     <div class="help-block with-errors"></div>
                   </div>
                 </div>
@@ -343,7 +343,7 @@ if(isset($_POST['order-request'])){
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" id="terms" data-error="Check Terms and Conditions" required>
-                    I read and accept the <a href="" alt="" data-toggle="modal" data-target="#myModal">Terms & Conditions</a>
+                    I read and accept the <a href="" alt="" data-toggle="modal" data-target="#myModal1">Terms & Conditions</a>
                   </label>
                   <div class="help-block with-errors"></div>
                 </div>
@@ -360,47 +360,28 @@ if(isset($_POST['order-request'])){
         
     </section> 
     
-    <?php include "includes/footer.php"; ?>   
-    
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Terms & Condition</h4>
-            </div>
-            <div class="modal-body">
-Thundercats before they sold out fap marfa forage art party. Schlitz coloring book succulents migas shoreditch. Messenger bag tbh umami, knausgaard fashion axe drinking vinegar waistcoat meggings 8-bit post-ironic keytar. Hell of marfa pinterest, hot chicken crucifix photo booth pour-over yuccie keffiyeh pabst whatever. Kinfolk asymmetrical food truck, normcore you probably haven't heard of them vice raw denim ugh organic kickstarter hella mlkshk taxidermy. Kale chips cliche readymade forage bespoke. Scenester organic polaroid disrupt marfa gentrify, echo park freegan tote bag mumblecore tbh squid.
-
-Small batch knausgaard raclette PBR&B. Wolf sustainable bespoke, af celiac artisan direct trade pitchfork man bun tumeric poutine green juice. Venmo williamsburg bicycle rights, farm-to-table selfies occupy gentrify kogi. Before they sold out church-key tumeric, thundercats gochujang fixie artisan VHS farm-to-table snackwave flexitarian four dollar toast. Literally blog bushwick shabby chic. Cronut single-origin coffee you probably haven't heard of them locavore authentic, offal ramps portland yuccie waistcoat cold-pressed plaid. Godard la croix tattooed post-ironic, polaroid edison bulb semiotics art party mlkshk gastropub echo park air plant 3 wolf moon.
-
-Beard sustainable fixie drinking vinegar. Selvage semiotics kitsch meh small batch literally, thundercats bicycle rights woke. Next level +1 everyday carry woke, prism coloring book chia PBR&B pok pok gochujang locavore mustache green juice direct trade meh. Yuccie helvetica literally humblebrag semiotics paleo. Blog banjo street art, hexagon hella man braid edison bulb chia selvage DIY truffaut. Tote bag distillery tousled, hell of twee put a bird on it PBR&B air plant iceland pok pok vexillologist actually. Squid listicle forage selvage mlkshk.
-
-Live-edge artisan occupy letterpress. Forage sriracha selfies, knausgaard portland craft beer chambray squid meggings stumptown echo park polaroid photo booth. Disrupt neutra gochujang lumbersexual banjo kickstarter. Air plant skateboard neutra, lomo paleo woke master cleanse everyday carry. Ethical everyday carry brooklyn microdosing. XOXO hashtag chartreuse cornhole. Distillery mumblecore dreamcatcher, keffiyeh +1 yuccie activated charcoal.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              
-          </div>
-        </div>
-      </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
  <?php 
   }
 ?>
+       
+    
+    <?php include "includes/footer.php"; ?>   
+    
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
   
 
     

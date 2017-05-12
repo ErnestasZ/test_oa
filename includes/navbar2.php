@@ -5,7 +5,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand1 page-scroll" href="#page-top">
                   <div class="nav2-logo">
 <!--                   OASIS-->
 <!--                    <img src="../images/logo/OASIS-LOGO-juodas.png" class="logo" alt="OASIS dome">-->

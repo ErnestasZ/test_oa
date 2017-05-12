@@ -8,18 +8,111 @@
  
 <?php
 
+if(isset($_POST['send'])){
+  
+  header("Location: index.php?param1=bele");
+  exit;
+  
+  
+  
+  $name = ($_POST['name']);
+  $email = ($_POST['email']);
+  $description = ($_POST['comment']);
+  
+  $to = $email;
+  $message = "Your request was sent succsessfuly!<br><br>Name: " . $name . "<br> Description: " . $description . "<br><br>OASIS DOME";
+  $subject = "Request received";
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+  
+  $headers .= 'From: <order@oasisdome.eu>' . "\r\n";
+  $headers .= 'Bcc: ernestas.zemaitis@gmail.com, order@oasisdome.eu' . "\r\n";
+  
+//  mail($to,$subject,$message,$headers);
+  
+  
+  
+}
 
 ?>
-  <header class=header-oasis>
-   
-    <div class="header-oasis1 mySlides">
-        <div class="container">
+<header>
+ 
+  <div class="text-header">
+    <div class="container">
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <div class="oasis-header">
                         <div class="header-content-inner">
                             <h1>Unique spot of senses</h1>
-                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surroundings.<br> Feel the moment and enjoy nature!</p>
+                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-movie" align="center">
+             
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-3 highlights">
+                  <a href="https://www.youtube.com/watch?v=fulVkG_RQ0k" target="_blank"><p>Movie highlights <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+                <div class="col-sm-3 highlights">
+                  <a href="https://vimeo.com/184565990" target="_blank"><p>Oasis movie <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+              </div>
+           
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <a href="#order" class="btn btn-outline btn-xl page-scroll btn-header">ORDER</a>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+    
+   <div class="flexslider oasis-slider">
+    <ul class="slides">
+      <li class="header-oasis1">
+         <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="oasis-header">
+                        <div class="header-content-inner">
+                            <h1>Unique spot of senses</h1>
+                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-movie" align="center">
+             
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-3 highlights">
+                  <a href="https://www.youtube.com/watch?v=fulVkG_RQ0k" target="_blank"><p>Movie highlights <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+                <div class="col-sm-3 highlights">
+                  <a href="https://vimeo.com/184565990" target="_blank"><p>Oasis movie <i class="icon-social-youtube icon-head"></i></p></a>
+                </div>
+              </div>
+           
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <a href="#order" class="btn btn-outline btn-xl page-scroll btn-header">ORDER</a>
+                </div>
+              </div>
+            </div>
+        </div>
+<!--        <img src="images/OASIS-INTRO1___.jpg" />-->
+      </li>
+      <li class="header-oasis2">
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="oasis-header">
+                        <div class="header-content-inner">
+                            <h1>Unique spot of senses</h1>
+                            <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surrounding.<br> Feel the moment and enjoy nature!</p>
                             
                         </div>
                     </div>
@@ -42,45 +135,17 @@
                 </div>
               </div>
             </div>
-      </div>
-    </div>
-    
-     <div class="header-oasis2 mySlides ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="oasis-header">
-                            <div class="header-content-inner">
-                                <h1>Unique spot of senses</h1>
-                                <p class="p-header">Glamping stay and 360-degree view for a luxury escape and connection with surroundings.<br> Feel the moment and enjoy nature!</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-movie" align="center">
-
-                  <div class="row">
-                    <div class="col-sm-3 col-sm-offset-3 highlights">
-                      <a href="https://vimeo.com/202928576" target="_blank"><p>Movie highlights <i class="icon-social-youtube icon-head"></i></p></a>
-                    </div>
-                    <div class="col-sm-3 highlights">
-                      <a href="https://vimeo.com/184565990" target="_blank"><p>Oasis movie <i class="icon-social-youtube icon-head"></i></p></a>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                      <a href="#order" class="btn btn-outline btn-xl page-scroll btn-header">ORDER</a>
-                    </div>
-                  </div>
-                </div>
-          </div>
         </div>
+<!--        <img src="images/OASIS-INTRO2___.jpg" />-->
+      </li>
+    </ul>
+  </div>  
+       
+   
         
-  </header>
+</header>
 
-    <section class=" text-center content-oasis">
+    <section class=" text-center content-oasis content-oasis-first">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
@@ -207,24 +272,23 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <h1 class="oasis-cont content-features">Materials</h1>
-                    <p>All construction is made of impregnated marine plywood.
-                    Plywood is highest quality and made from local wood.
+                    <p>All construction is made of impregnated marine plywood. Plywood is highest quality and made from local wood.
                     Floor and arches are impregnated with natural oil for a <em>soft touch feeling.</em>
-                    Zincify stainless steel fittings.</p>
+                    Zincify steel fittings. Canopy is UV resistand and long-term transparency.</p>
                 </div>
             </div>
             <div class="row">
               <div class="col-sm-5 col-sm-offset-1">
                 <div class="features-icons">
-                  <img src="images/icons/sertificaton1.png" alt="" class="sertification-icon">
-                  <img src="images/icons/sertification.png" alt="" class="sertification-icon">
+                  <img src="images/icons/MAT_CERT.png" alt="" class="sertification-icon">
+                
                   <h3>Materials sertifications</h3>
                   
                 </div>
               </div>
               <div class="col-sm-5">
                 <div class="features-icons">
-                  <img src="images/icons/recycle.png" alt="" class="recycle-icon">
+                  <img src="images/icons/RECYCLE_2.png" alt="" class="recycle-icon">
                   <h3>All materials is recycable</h3>
                 </div>
               </div>
@@ -651,78 +715,74 @@
                   <p>Leave an inquiry below, we will get in touch with you</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="container">
+            
+            
+            
+            <form action="index.php" class="" data-toggle="validator" role="form" method="post">
+               
+               
+                
+                <div class="row">
+                 <div class="col-sm-6 col-sm-offset-3">
+                     <div class="form-group">
+<!--                      <label for="inputEmail" class="control-label">Email</label>-->
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required name="email">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                 </div>
+                 <div class="col-sm-6 col-sm-offset-3">
+                  <div class="form-group">
+<!--                      <label for="inputName" class="control-label">Name</label>-->
+                      <input type="text" class="form-control" id="inputName" data-error="What your Name?" placeholder="Name" required name="name">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+               </div>
+               
+             
+              
+              <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                   <form class="form-horizontal" action="order_sent.php" method="post"  id="contact_form" role="form">
-                <fieldset>
-
-                <!-- Form Name -->
-
-
-                <!-- Text input-->
-
-
-
-                <!-- Text input-->
-
-                
-                <div class="form-group">
-                  
-                    <div class="inputGroupContainer">
-                    <div >
-                  
-                  <input name="first_name" placeholder="Name" class="form-control"  type="text">
-                    </div>
+                  <div class="form-group">
+<!--                    <label for="inputComment" class="control-label">Address</label>-->
+                    <textarea class="form-control" id="inputComment" placeholder="Comment / Question" cols="10" rows="5" name="comment" required></textarea>
                   </div>
                 </div>
                 
-
-              <!-- Text input-->
-               <div class="form-group">
+              </div>
                  
-                  <div class="inputGroupContainer">
-                  <div >
-                      
-                    <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-                  </div>
-                </div>
+              <div id="messages" class="hide" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div id="messages_content"></div>
               </div>
-
-
-<!-- Text input-->
-       
-
-                    <!-- Text area -->
-
-                    <div class="form-group">
-                      <div class="inputGroupContainer">
-                        <div >
-                              <textarea class="form-control" name="comment" placeholder="How may we help you?" rows="5"></textarea>
-                      </div>
-                      </div>
-                    </div>
-
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                      <label class="col-md-4 control-label"></label>
-                      <div class="col-md-4">
-                        <input type="submit"  class="btn btn-outline btn-xl" value="Send">
-                      </div>
-                    </div>
-
-                    </fieldset>
-                    </form>
-
-   <!-- /.container -->
-                </div>
+                  
+              <div class="form-group" align="center">
+                <button type="submit" class="btn btn-outline btn-xl "   name="send" >send</button>
               </div>
-            </div>
-  
+            </form>
+
         </div>
     </section> 
     
+    
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Succeeded!</h4>
+            </div>
+            <div class="modal-body">
+              Thanks for contacting us, we will get back to you shortly.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+              
+          </div>
+        </div>
+      </div>   
+    </div>
+    
 <?php include "includes/footer.php";?>  
+
+

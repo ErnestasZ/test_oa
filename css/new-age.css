@@ -65,11 +65,43 @@ p {
   letter-spacing: 1px;
 }
 .navbar-default .navbar-header .navbar-brand {
+  width: 75px;
+  height: 31px;
+  margin-top: 10px; 
+  position: absolute;
+/*  height: 100%;*/
+  background: url("../images/logo/oasis-logo2.png") no-repeat ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+/*
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
   color: #d55602;
+*/
 }
+
+.navbar-default .navbar-header .navbar-brand1 {
+  width: 75px;
+  height: 31px;
+  margin-top: 10px; 
+  position: absolute;
+/*  height: 100%;*/
+  background: url("../images/logo/oasis_logo_juodas_.png") no-repeat ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+/*
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: #d55602;
+*/
+}
+
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
   color: #d55602;
@@ -127,7 +159,18 @@ p {
     border-color: rgba(34, 34, 34, 0.1);
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #222222;
+/*    width: 75px;*/
+/*    height: 31px;*/
+    margin-top: 10px; 
+    padding: 2px !important;
+    position: absolute;
+/*    height: auto;*/
+    background: url("../images/logo/oasis_logo_juodas_.png") no-repeat center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+/*    color: #222222;*/
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
@@ -139,7 +182,7 @@ p {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #fdcbtc52;
+    color: #fdcc52;
   }
 }
 
@@ -174,7 +217,7 @@ header .device-container .screen img {
 }
 @media (min-width: 768px) {
   header {
-    min-height: 100%;
+/*    min-height: 100%;*/
   }
   header .header-content {
     text-align: left;
