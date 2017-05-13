@@ -1,7 +1,7 @@
 <?php include "classes.php" ?>
 <?php session_start(); ?>
+<?php ob_start(); ?>
 <?php include "includes/header.php";?>
-
 <?php
 
 if(isset($_POST['order-request'])){
@@ -9,7 +9,7 @@ if(isset($_POST['order-request'])){
   $subject = "OASIS dome";
 $message = "
 <html>
-<head>
+
 <title>Oasis Dome</title>
 </head>
 <body>
@@ -20,7 +20,7 @@ $message = "
 <th></th>
 </tr>
 <tr>
-<td>Puzero UAB<br>Company No. 303447415<br>Elnių str. 27-62, Vilnius, 08101<br>IBAN LT17 7044 0600 0799 2398<br>Bank SEB 70440<br>Director Vytautas Puzeras
+<td>Puzero UAB<br>Company No. 303447415<br>Elniu台 str. 27-62, Vilnius, 08101<br>IBAN LT17 7044 0600 0799 2398<br>Bank SEB 70440<br>Director Vytautas Puzeras
 <p></p>
 </td>
 <td></td>
@@ -109,12 +109,15 @@ $message .= "</body></html>";
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
   
   $headers .= 'From: <order@oasisdome.eu>' . "\r\n";
-  $headers .= 'Bcc: ernestas.zemaitis@gmail.com, order@oasisdome.eu' . "\r\n";
-//  
-//  mail($to,$subject,$message,$headers);
-//  
+  $headers .= 'Bcc: order@oasisdome.eu' . "\r\n";
+
+mail($to,$subject,$message,$headers);
+  
   unset($_SESSION['cart']);
 ?>
+
+
+
 
         <div class="container">
            <div class="jumbotron cart-jumbotron">
@@ -126,10 +129,8 @@ $message .= "</body></html>";
           </div>
 <?php
 } else {
-  header("Location: index.php");
+header("Location: index.php");
   exit;
 }
   ?>
-  
-
-<?php include "includes/footer.php";?> 
+<?php include "includes/footer.php";?>

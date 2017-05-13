@@ -1,21 +1,12 @@
 <?php session_start(); ?>
+<?php ob_start(); ?>
 <?php include "classes.php" ?>
-
-
+<?php include "includes/config.php" ?>
 <?php include "includes/header.php";?>
-
 <?php include "includes/navbar.php";?>  
- 
 <?php
-
 if(isset($_POST['send'])){
-  
-  header("Location: index.php?param1=bele");
-  exit;
-  
-  
-  
-  $name = ($_POST['name']);
+$name = ($_POST['name']);
   $email = ($_POST['email']);
   $description = ($_POST['comment']);
   
@@ -26,10 +17,12 @@ if(isset($_POST['send'])){
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
   
   $headers .= 'From: <order@oasisdome.eu>' . "\r\n";
-  $headers .= 'Bcc: ernestas.zemaitis@gmail.com, order@oasisdome.eu' . "\r\n";
+  $headers .= 'Bcc: order@oasisdome.eu' . "\r\n";
   
-//  mail($to,$subject,$message,$headers);
+mail($to,$subject,$message,$headers);
   
+  header("Location: index.php?param1=bele");
+  exit;
   
   
 }
